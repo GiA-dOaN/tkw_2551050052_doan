@@ -5,27 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist/output.css">
+<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="dist/output.css">
     <title>Document</title>
 </head>
 <body>
   <a href="#main">Bỏ qua đến nội dung chính</a>
 
-  <header>
-    <nav aria-label="Điều hướng chính">
-      <a href="#">…</a>
-      <ul>
+    <header>
+    <nav aria-label="Điều hướng chính" class="section flex items-center justify-between py-5 lg:py-6">
+      <a href="#" class="font-display text-xl font-bold text-brand-600">…</a>
+      <ul class="hidden items-center gap-8 text-sm font-medium text-ink lg:flex">
         <li><a href="#">…</a></li>
         <li><a href="#">…</a></li>
       </ul>
-      <button>…</button>
+      <button class="btn btn-primary">…</button>
     </nav>
   </header>
 
   <main id="main">
-    <section aria-labelledby="hero-title">
-      <h1 id="hero-title">…</h1>
+     <section aria-labelledby="hero-title" class="section grid items-center gap-14 lg:grid-cols-2 lg:gap-16">
+      <div>
+        <h1 id="hero-title" class="font-display text-h1 font-bold text-ink">…</h1>
+        <p class="mt-5 text-muted">…</p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <button class="btn btn-primary">…</button>
+          <button class="btn">…</button>
+        </div>
+      </div>
+      <img src="./assets/img/hero.png" alt="…" class="w-full">
     </section>
 
     <section aria-labelledby="khach-hang-title">
