@@ -1,15 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist/output.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>DataBox</title>
+  <link rel="stylesheet" href="./dist/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    	 <h1 class="font-display text-brand-500">Thử</h1>
+  <a href="#main">Bỏ qua đến nội dung chính</a>
+
+  <header class="section">
+    <nav aria-label="Điều hướng chính" class="mx-auto w-full max-w-6xl px-5 py-4 lg:py-28 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 font-display text-xl font-bold text-brand-600">
+      <img src="./assets/img/DBlogo.png" alt="" class="h-10 w-10">
+              DataBox
+      </a>
+      <ul class="hidden items-center gap-8 text-sm font-medium lg:flex">
+        <li><a href="#" class="hover:text-brand-500">Tính năng</a></li>
+        <li><a href="#" class="hover:text-brand-500">Số liệu</a></li>
+        <li><a href="#" class="hover:text-brand-500">Cảm nhận</a></li>
+        <li><a href="#" class="hover:text-brand-500">Bảng giá</a></li>
+        <li><a href="#" class="hover:text-brand-500">Câu hỏi</a></li>
+      </ul>
+      <button class="btn btn-primary">…</button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section aria-labelledby="hero-title" class="section">
+      <h1 id="hero-title" class="mt-4 text-4xl leading-[1.1] sm:text-5xl lg:text-6xl font-display text-h1 text-ink">File lớn, gửi nhanh, biết khi nào file đã được mở</h1>
+      <p class="text-muted">Không bắt người nhận đăng ký tài khoản. Chỉ cần một link, gửi qua đâu cũng được, và bạn luôn biết chính xác file đã được tải lúc nào, mấy lần.</p>
+      <button class="btn btn-primary">…</button>
+      <button class="btn">…</button>
+      <img src="./assets/img/hero.png" alt="…">
+    </section>
+
+    <section aria-labelledby="khach-hang-title" class="section">
+      <h2 id="khach-hang-title" class="sr-only">Được các đội ngũ tin dùng</h2>
+  <ul class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+    <li><img src="./assets/img/Google.png" alt="Logo Google" class="logo-item"></li>
+    <li><img src="./assets/img/Microsoft.png" alt="Logo Microsoft" class="logo-item"></li>
+    <li><img src="./assets/img/Spotify.png" alt="Logo Spotify" class="logo-item"></li>
+    <li><img src="./assets/img/Dropbox.png" alt="Logo Dropbox" class="logo-item"></li>
+    <li><img src="./assets/img/Airbnb.png" alt="Logo Airbnb" class="logo-item"></li>
+    <li><img src="./assets/img/Uber.png" alt="Logo Uber" class="logo-item"></li>
+  </ul>
+</section>
+    </section>
+
+    <section aria-labelledby="tinh-nang-title" class="section">
+      <h2 id="tinh-nang-title" class="font-display text-h2 text-ink">…</h2>
+      <ul> <li> <h3 class="font-display text-h3 text-ink">…</h3> </li> </ul>
+    </section>
+
+    <section aria-labelledby="so-lieu-title" class="section">
+      <h2 id="so-lieu-title" class="font-display text-h2 text-ink">…</h2>
+      <ul> <li>…</li> </ul>
+    </section>
+
+    <section aria-labelledby="cam-nhan-title" class="section">
+      <h2 id="cam-nhan-title" class="font-display text-h2 text-ink">…</h2>
+      <ul> <li>…</li> </ul>
+    </section>
+
+    <section aria-labelledby="bang-gia-title" class="section">
+      <h2 id="bang-gia-title" class="font-display text-h2 text-ink">Chọn gói vừa với nhu cầu, không trả tiền cho thứ không dùng</h2>
+      <ul>
+        <li>
+          <h3 class="font-display text-h3 text-ink">Cơ bản</h3>
+          <p class="text-ink">0đ /tháng</p>
+          <ul class="text-muted">
+            <li>Tối đa 2GB mỗi file</li>
+            <li>File tự xoá sau 7 ngày</li>
+            <li>Xem lượt tải 7 ngày gần nhất</li>
+          </ul>
+          <button class="btn btn-primary">Bắt đầu miễn phí</button>
+        </li>
+        <li>
+          <h3 class="font-display text-h3 text-ink">Tiêu chuẩn</h3>
+          <p class="text-ink">49.000đ /tháng</p>
+          <ul class="text-muted">
+            <li>Tối đa 20GB mỗi file</li>
+            <li>Tự chọn ngày xoá file, kể cả lưu vĩnh viễn</li>
+            <li>Đặt mật khẩu cho từng link chia sẻ</li>
+            <li>Xem lượt tải không giới hạn thời gian</li>
+          </ul>
+          <button class="btn btn-primary">Nâng cấp Tiêu chuẩn</button>
+        </li>
+        <li>
+          <h3 class="font-display text-h3 text-ink">Nhóm</h3>
+          <p class="text-ink">129.000đ /tháng</p>
+          <ul class="text-muted">
+            <li>Mọi quyền lợi gói Tiêu chuẩn</li>
+            <li>Tối đa 5 người dùng chung 1 nhóm</li>
+            <li>Thư mục dùng chung cho cả nhóm</li>
+          </ul>
+          <button class="btn btn-primary">Bắt đầu dùng Nhóm</button>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="cau-hoi-title" class="section">
+      <h2 id="cau-hoi-title" class="font-display text-h2 text-ink">Câu hỏi hay gặp</h2>
+      <ul>
+        <li>
+          <h3><button aria-expanded="true" class="text-ink">Người nhận file có cần tạo tài khoản không?</button></h3>
+          <p class="text-muted">Không cần. Người nhận chỉ cần bấm vào link là tải được ngay, không phải đăng nhập hay cài thêm gì.</p>
+        </li>
+        <li>
+          <h3><button aria-expanded="true" class="text-ink">File của mình có bị người lạ xem được không?</button></h3>
+          <p class="text-muted">Bạn có thể đặt mật khẩu cho từng link chia sẻ. Ai không có mật khẩu thì không mở file được, kể cả khi có đúng link.</p>
+        </li>
+        <li>
+          <h3><button aria-expanded="true" class="text-ink">File để lâu không ai tải thì có bị xoá không?</button></h3>
+          <p class="text-muted">Gói Cơ bản file tự xoá sau 7 ngày nếu không ai tải. Gói Tiêu chuẩn và Nhóm bạn tự chọn thời gian lưu, kể cả lưu vĩnh viễn.</p>
+        </li>
+        <li>
+          <h3><button aria-expanded="true" class="text-ink">Đang dùng gói trả phí, huỷ giữa tháng được không?</button></h3>
+          <p class="text-muted">Được. Bạn huỷ lúc nào cũng được, không mất thêm phí phạt, dùng hết tới ngày cuối của tháng đã đóng tiền rồi tự chuyển về gói Cơ bản.</p>
+        </li>
+        <li>
+          <h3><button aria-expanded="true" class="text-ink">Gói Cơ bản giới hạn dung lượng file bao nhiêu?</button></h3>
+          <p class="text-muted">Mỗi file tối đa 2GB, đủ cho hầu hết file ảnh, PDF, video ngắn. Cần gửi file lớn hơn thì nâng lên gói Tiêu chuẩn.</p>
+        </li>
+        <li>
+          <h3><button aria-expanded="true" class="text-ink">Có xem được file của mình đã được tải chưa không?</button></h3>
+          <p class="text-muted">Có. Mỗi link chia sẻ đều có bảng ghi lại số lượt tải và thời gian tải gần nhất. DataBox không hiển thị danh tính người tải, chỉ cho biết file đã được mở hay chưa.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="cta-title" class="section">
+      <h2 id="cta-title" class="font-display text-h2 text-ink">…</h2>
+    </section>
+  </main>
+
+  <footer class="section">
+    <ul>
+      <li><a href="#">…</a></li>
+      <li><a href="#">…</a></li>
+    </ul>
+  </footer>
 </body>
 </html>
