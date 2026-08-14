@@ -2,146 +2,459 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DataBox</title>
   <link rel="stylesheet" href="./dist/output.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <a href="#main">Bỏ qua đến nội dung chính</a>
 
   <header class="section">
-    <nav aria-label="Điều hướng chính" class="mx-auto w-full max-w-6xl px-5 py-4 lg:py-28 flex items-center justify-between">
+    <nav aria-label="Điều hướng chính" class="mx-auto w-full max-w-6xl px-5 py-4 lg:py-6 flex items-center justify-between">
       <a href="#" class="flex items-center gap-2 font-display text-xl font-bold text-brand-600">
-      <img src="./assets/img/DBlogo.png" alt="" class="h-10 w-10">
-              DataBox
+        <img src="./assets/img/DBlogo.png" alt="" class="h-10 w-10">
+        DataBox
       </a>
+
       <ul class="hidden items-center gap-8 text-sm font-medium lg:flex">
-        <li><a href="#" class="hover:text-brand-500">Tính năng</a></li>
-        <li><a href="#" class="hover:text-brand-500">Số liệu</a></li>
-        <li><a href="#" class="hover:text-brand-500">Cảm nhận</a></li>
-        <li><a href="#" class="hover:text-brand-500">Bảng giá</a></li>
-        <li><a href="#" class="hover:text-brand-500">Câu hỏi</a></li>
+        <li><a href="#" class="hover:text-brand-600">Tính năng</a></li>
+        <li><a href="#" class="hover:text-brand-600">Số liệu</a></li>
+        <li><a href="#" class="hover:text-brand-600">Cảm nhận</a></li>
+        <li><a href="#" class="hover:text-brand-600">Bảng giá</a></li>
+        <li><a href="#" class="hover:text-brand-600">Câu hỏi</a></li>
       </ul>
-      <button class="btn btn-primary">…</button>
+
+      <div class="flex items-center gap-4">
+        <a href="#" class="hidden text-sm font-medium text-ink hover:text-brand-600 lg:inline">Đăng nhập</a>
+        <button class="btn btn-primary">Bắt đầu miễn phí</button>
+      </div>
     </nav>
   </header>
 
   <main id="main">
-    <section aria-labelledby="hero-title" class="section">
-      <h1 id="hero-title" class="mt-4 text-4xl leading-[1.1] sm:text-5xl lg:text-6xl font-display text-h1 text-ink">File lớn, gửi nhanh, biết khi nào file đã được mở</h1>
-      <p class="text-muted">Không bắt người nhận đăng ký tài khoản. Chỉ cần một link, gửi qua đâu cũng được, và bạn luôn biết chính xác file đã được tải lúc nào, mấy lần.</p>
-      <button class="btn btn-primary">…</button>
-      <button class="btn">…</button>
+
+    <section aria-labelledby="hero-title" class="section grid items-center gap-14 lg:grid-cols-2 lg:gap-16">
+      <div class="flex flex-col items-start gap-6">
+        <h1 id="hero-title" class="font-display text-h1 text-ink">File lớn, gửi nhanh, kiểm soát được file</h1>
+        <p class="text-muted">Không bắt người nhận đăng ký tài khoản. Chỉ cần một link, gửi qua đâu cũng được, và bạn luôn biết chính xác file đã được tải lúc nào, mấy lần.</p>
+
+        <div class="flex flex-wrap gap-4">
+          <button class="btn btn-primary">Bắt đầu dùng thử Tiêu chuẩn 7 ngày</button>
+          <button class="btn btn-outline">Xem bảng giá</button>
+        </div>
+      </div>
+
       <img src="./assets/img/hero.png" alt="…">
     </section>
 
+
     <section aria-labelledby="khach-hang-title" class="section">
       <h2 id="khach-hang-title" class="sr-only">Được các đội ngũ tin dùng</h2>
-  <ul class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
-    <li><img src="./assets/img/Google.png" alt="Logo Google" class="logo-item"></li>
-    <li><img src="./assets/img/Microsoft.png" alt="Logo Microsoft" class="logo-item"></li>
-    <li><img src="./assets/img/Spotify.png" alt="Logo Spotify" class="logo-item"></li>
-    <li><img src="./assets/img/Dropbox.png" alt="Logo Dropbox" class="logo-item"></li>
-    <li><img src="./assets/img/Airbnb.png" alt="Logo Airbnb" class="logo-item"></li>
-    <li><img src="./assets/img/Uber.png" alt="Logo Uber" class="logo-item"></li>
-  </ul>
-</section>
+
+      <ul class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+        <li><img src="./assets/img/Google.png" alt="Logo Google" class="logo-item"></li>
+        <li><img src="./assets/img/Microsoft.png" alt="Logo Microsoft" class="logo-item"></li>
+        <li><img src="./assets/img/Spotify.png" alt="Logo Spotify" class="logo-item"></li>
+        <li><img src="./assets/img/Dropbox.png" alt="Logo Dropbox" class="logo-item h-10"></li>
+        <li><img src="./assets/img/Airbnb.png" alt="Logo Airbnb" class="logo-item h-10"></li>
+        <li><img src="./assets/img/Uber.png" alt="Logo Uber" class="logo-item"></li>
+      </ul>
     </section>
+
 
     <section aria-labelledby="tinh-nang-title" class="section">
-      <h2 id="tinh-nang-title" class="font-display text-h2 text-ink">…</h2>
-      <ul> <li> <h3 class="font-display text-h3 text-ink">…</h3> </li> </ul>
+      <div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <div class="flex flex-col gap-6">
+          <h2 id="tinh-nang-title" class="font-display text-h2 text-ink">Không phải chỉ lưu file, mà là kiểm soát được file</h2>
+          <p class="text-muted">Đặt mật khẩu cho link, xem lượt tải, giới hạn thời gian tồn tại — mọi thứ nằm trong bảng điều khiển, không cần công cụ ngoài.</p>
+
+          <ul class="flex flex-col gap-3 border-t border-line pt-6 text-sm font-medium text-ink">
+            <li class="flex items-center gap-3">
+              <span class="grid h-5 w-5 place-items-center rounded-full bg-brand-50 text-brand-600">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+              </span>
+              Đặt mật khẩu cho từng link chia sẻ
+            </li>
+
+            <li class="flex items-center gap-3">
+              <span class="grid h-5 w-5 place-items-center rounded-full bg-brand-50 text-brand-600">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+              </span>
+              Xem lượt tải, thời gian tải gần nhất
+            </li>
+
+            <li class="flex items-center gap-3">
+              <span class="grid h-5 w-5 place-items-center rounded-full bg-brand-50 text-brand-600">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+              </span>
+              Giới hạn số lần tải, tự xoá theo lịch
+            </li>
+          </ul>
+
+          <p class="text-sm text-muted">Không cần cài thêm phần mềm hay công cụ ngoài, mọi thao tác nằm gọn trong 1 trang quản lý.</p>
+        </div>
+
+        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2">
+          <div class="rounded-card bg-surface p-4">…</div>
+          <div class="rounded-card bg-surface p-4">…</div>
+          <div class="rounded-card bg-surface p-4">…</div>
+          <div class="rounded-card bg-surface p-4">…</div>
+        </div>
+      </div>
     </section>
+
+
+    <section aria-labelledby="tinh-nang-2-title" class="section">
+      <div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="row-span-2 rounded-card bg-surface p-4">…</div>
+          <div class="rounded-card bg-surface p-4">…</div>
+          <div class="rounded-card bg-surface p-4">…</div>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <h2 id="tinh-nang-2-title" class="font-display text-h2 text-ink">Gửi nhanh, không giới hạn nơi mở file</h2>
+          <p class="text-muted">Kéo file vào, copy link, gửi qua đâu cũng được. Người nhận không cần cài gì thêm.</p>
+
+          <ul class="flex flex-col gap-3 border-t border-line pt-6 text-sm font-medium text-ink">
+            <li class="flex items-center gap-3">
+              <span class="grid h-5 w-5 place-items-center rounded-full bg-brand-50 text-brand-600">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+              </span>
+              Kéo 20 file cùng lúc
+            </li>
+
+            <li class="flex items-center gap-3">
+              <span class="grid h-5 w-5 place-items-center rounded-full bg-brand-50 text-brand-600">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+              </span>
+              Mất mạng vẫn tải tiếp, không tải lại từ đầu
+            </li>
+
+            <li class="flex items-center gap-3">
+              <span class="grid h-5 w-5 place-items-center rounded-full bg-brand-50 text-brand-600">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+              </span>
+              Người nhận không cần tài khoản
+            </li>
+
+            <li class="flex items-center gap-3">
+              <span class="grid h-5 w-5 place-items-center rounded-full bg-brand-50 text-brand-600">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+              </span>
+              Gửi qua Zalo, email, tin nhắn đều được
+            </li>
+
+            <li class="flex items-center gap-3">
+              <span class="grid h-5 w-5 place-items-center rounded-full bg-brand-50 text-brand-600">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+              </span>
+              Không giới hạn số lần tải cho gói trả phí
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
 
     <section aria-labelledby="so-lieu-title" class="section">
-      <h2 id="so-lieu-title" class="font-display text-h2 text-ink">…</h2>
-      <ul> <li>…</li> </ul>
+      <div class="grid items-center gap-14 lg:grid-cols-2 lg:gap-16">
+
+        <div class="flex flex-col gap-5">
+          <p class="text-sm font-semibold text-brand-600">Bảo mật hàng đầu</p>
+
+          <h2 id="so-lieu-title" class="font-display text-h2 text-ink">
+            Được thiết kế để bạn kiểm soát, không phải lo lắng về file
+          </h2>
+
+          <p class="text-muted">
+            Mọi tiêu chuẩn bảo mật và quyền riêng tư đều được đặt lên hàng đầu. DataBox không hiển thị danh tính người tải, không công khai IP, chỉ cho bạn biết đúng những gì cần biết.
+          </p>
+
+          <div class="flex flex-col gap-2 border-t border-line pt-5 text-sm font-semibold text-brand-600">
+            <a href="#cau-hoi-title" class="inline-flex items-center gap-1 hover:text-brand-800">
+              Xem câu hỏi thường gặp
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+
+            <a href="#bang-gia-title" class="inline-flex items-center gap-1 hover:text-brand-800">
+              Xem bảng giá
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="grid grid-cols-2 gap-x-8 gap-y-10">
+          <div class="flex flex-col gap-2">
+            <span class="text-brand-600" aria-hidden="true">
+              <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M12 3v18"/></svg>
+            </span>
+            <dt class="order-3 text-sm text-muted text-pretty">dung lượng tối đa mỗi file, gói Tiêu chuẩn</dt>
+            <dd class="font-display text-2xl font-extrabold text-ink">20GB</dd>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <span class="text-brand-600" aria-hidden="true">
+              <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            </span>
+            <dt class="order-3 text-sm text-muted text-pretty">gói Cơ bản tự động xoá file sau khi hết hạn</dt>
+            <dd class="font-display text-2xl font-extrabold text-ink">7 ngày</dd>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <span class="text-brand-600" aria-hidden="true">
+              <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h8M8 14h5"/></svg>
+            </span>
+            <dt class="order-3 text-sm text-muted text-pretty">mở file ngay trên trình duyệt</dt>
+            <dd class="font-display text-2xl font-extrabold text-ink">Không cần cài</dd>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <span class="text-brand-600" aria-hidden="true">
+              <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            </span>
+            <dt class="order-3 text-sm text-muted text-pretty">link luôn truy cập được, không giới hạn giờ</dt>
+            <dd class="font-display text-2xl font-extrabold text-ink">24/7</dd>
+          </div>
+        </dl>
+
+      </div>
     </section>
 
-    <section aria-labelledby="cam-nhan-title" class="section">
-      <h2 id="cam-nhan-title" class="font-display text-h2 text-ink">…</h2>
-      <ul> <li>…</li> </ul>
+
+    <section aria-labelledby="cam-nhan-title" class="section bg-surface">
+      <div class="flex flex-col items-center gap-8 text-center">
+        <h2 id="cam-nhan-title" class="sr-only">Cam kết của DataBox</h2>
+
+        <span class="grid h-12 w-12 place-items-center text-brand-600" aria-hidden="true">
+          <svg class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 4C6 4 3 7.1 3 10.9c0 3 2 5.4 4.6 6L9 20c-3.9-.6-7-3.9-7-8.5C2 6.3 5.6 2 10.5 2L9.5 4Zm10 0c-3.5 0-6.5 3.1-6.5 6.9 0 3 2 5.4 4.6 6l1.4 3.1c-3.9-.6-7-3.9-7-8.5C12 6.3 15.6 2 20.5 2L19.5 4Z"/></svg>
+        </span>
+
+        <figure class="flex max-w-2xl flex-col items-center gap-6">
+          <blockquote class="font-display text-2xl font-medium text-ink lg:text-3xl">
+            Trước đây gửi file dựng phim 3GB cho khách qua Zalo hay bị lỗi giữa chừng. Giờ gửi link DataBox, khách tải xong tôi thấy ngay trên bảng thống kê, khỏi phải nhắn hỏi lại.
+          </blockquote>
+
+          <figcaption class="flex items-center gap-2 text-sm">
+            <img src="./assets/img/avatar-1.png" alt="" class="h-8 w-8 rounded-full">
+            <span class="font-semibold text-ink">Trần Minh Khoa</span>
+            <span class="text-muted" aria-hidden="true">/</span>
+            <cite class="not-italic text-muted">Dựng phim tự do</cite>
+          </figcaption>
+        </figure>
+      </div>
     </section>
+
+
+    <section aria-labelledby="so-sanh-title" class="section">
+      <div class="flex flex-col items-center gap-4 text-center">
+        <h2 id="so-sanh-title" class="font-display text-h2 text-ink">Không phải đổi thói quen, chỉ là gửi file tốt hơn</h2>
+        <p class="max-w-xl text-muted">Vẫn gửi qua Zalo hay email được, chỉ là bạn sẽ hết phải nhắn hỏi khách đã tải chưa.</p>
+      </div>
+
+      <div class="mt-14 overflow-x-auto">
+        <table class="w-full border-collapse overflow-hidden rounded-card border-2 border-line text-left">
+          <caption class="sr-only">So sánh gửi file qua Zalo/Email và DataBox gói Tiêu chuẩn</caption>
+
+          <thead>
+            <tr class="border-b border-line bg-surface">
+              <th scope="col" class="py-4 pr-6 pl-6 text-sm font-semibold text-muted">Tiêu chí</th>
+              <th scope="col" class="px-6 py-4 text-sm font-semibold text-muted">Zalo / Email</th>
+              <th scope="col" class="bg-brand-100 px-6 py-4 text-sm font-semibold text-brand-600">DataBox Tiêu chuẩn</th>
+            </tr>
+          </thead>
+
+          <tbody class="divide-y divide-line">
+            <tr>
+              <th scope="row" class="py-5 pr-6 pl-6 text-sm font-medium text-ink">Dung lượng mỗi file</th>
+              <td class="px-6 py-5 text-sm text-muted">Hay lỗi với file lớn, tầm 3GB trở lên</td>
+              <td class="bg-brand-100 px-6 py-5 text-sm font-semibold text-ink">
+                <span class="inline-flex items-center gap-2">
+                  <svg class="h-4 w-4 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+                  Tối đa 20GB
+                </span>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" class="py-5 pr-6 pl-6 text-sm font-medium text-ink">Biết ai đã tải, lúc nào</th>
+              <td class="px-6 py-5 text-sm text-muted">Không biết, phải nhắn hỏi lại</td>
+              <td class="bg-brand-100 px-6 py-5 text-sm font-semibold text-ink">
+                <span class="inline-flex items-center gap-2">
+                  <svg class="h-4 w-4 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+                  Xem ngay trên bảng thống kê
+                </span>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row" class="py-5 pr-6 pl-6 text-sm font-medium text-ink">Bảo vệ file</th>
+              <td class="px-6 py-5 text-sm text-muted">Ai có link cũng mở được</td>
+              <td class="bg-brand-100 px-6 py-5 text-sm font-semibold text-ink">
+                <span class="inline-flex items-center gap-2">
+                  <svg class="h-4 w-4 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+                  Đặt mật khẩu riêng từng link
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
 
     <section aria-labelledby="bang-gia-title" class="section">
-      <h2 id="bang-gia-title" class="font-display text-h2 text-ink">Chọn gói vừa với nhu cầu, không trả tiền cho thứ không dùng</h2>
-      <ul>
-        <li>
-          <h3 class="font-display text-h3 text-ink">Cơ bản</h3>
-          <p class="text-ink">0đ /tháng</p>
-          <ul class="text-muted">
-            <li>Tối đa 2GB mỗi file</li>
-            <li>File tự xoá sau 7 ngày</li>
-            <li>Xem lượt tải 7 ngày gần nhất</li>
-          </ul>
-          <button class="btn btn-primary">Bắt đầu miễn phí</button>
-        </li>
-        <li>
-          <h3 class="font-display text-h3 text-ink">Tiêu chuẩn</h3>
-          <p class="text-ink">49.000đ /tháng</p>
-          <ul class="text-muted">
-            <li>Tối đa 20GB mỗi file</li>
-            <li>Tự chọn ngày xoá file, kể cả lưu vĩnh viễn</li>
-            <li>Đặt mật khẩu cho từng link chia sẻ</li>
-            <li>Xem lượt tải không giới hạn thời gian</li>
-          </ul>
-          <button class="btn btn-primary">Nâng cấp Tiêu chuẩn</button>
-        </li>
-        <li>
-          <h3 class="font-display text-h3 text-ink">Nhóm</h3>
-          <p class="text-ink">129.000đ /tháng</p>
-          <ul class="text-muted">
-            <li>Mọi quyền lợi gói Tiêu chuẩn</li>
-            <li>Tối đa 5 người dùng chung 1 nhóm</li>
-            <li>Thư mục dùng chung cho cả nhóm</li>
-          </ul>
-          <button class="btn btn-primary">Bắt đầu dùng Nhóm</button>
-        </li>
-      </ul>
+      <div class="flex flex-col gap-10">
+        <h2 id="bang-gia-title" class="font-display text-h2 text-ink">Chọn gói vừa với nhu cầu, không trả tiền cho thứ không dùng</h2>
+
+        <ul class="grid items-stretch gap-6 lg:grid-cols-3">
+          <li class="card flex h-full flex-col gap-4">
+            <h3 class="font-display text-h3 text-ink">Cơ bản</h3>
+            <p class="text-ink">0đ /tháng</p>
+
+            <ul class="flex flex-col gap-2 text-muted">
+              <li>Tối đa 2GB mỗi file</li>
+              <li>File tự xoá sau 7 ngày</li>
+              <li>Xem lượt tải 7 ngày gần nhất</li>
+            </ul>
+
+            <button class="btn btn-primary mt-auto">Bắt đầu miễn phí</button>
+          </li>
+
+          <li class="card relative flex h-full flex-col gap-4 ring-2 ring-brand-600">
+            <span class="badge absolute -top-3 left-6 bg-brand-600 text-white">Được chọn nhiều nhất</span>
+            <h3 class="font-display text-h3 text-ink">Tiêu chuẩn</h3>
+            <p class="text-ink">49.000đ /tháng</p>
+
+            <ul class="flex flex-col gap-2 text-muted">
+              <li>Tối đa 20GB mỗi file</li>
+              <li>Tự chọn ngày xoá file, kể cả lưu vĩnh viễn</li>
+              <li>Đặt mật khẩu cho từng link chia sẻ</li>
+              <li>Xem lượt tải không giới hạn thời gian</li>
+            </ul>
+
+            <button class="btn btn-primary mt-auto">Nâng cấp Tiêu chuẩn</button>
+          </li>
+
+          <li class="card flex h-full flex-col gap-4">
+            <h3 class="font-display text-h3 text-ink">Nhóm</h3>
+            <p class="text-ink">129.000đ /tháng</p>
+
+            <ul class="flex flex-col gap-2 text-muted">
+              <li>Mọi quyền lợi gói Tiêu chuẩn</li>
+              <li>Tối đa 5 người dùng chung 1 nhóm</li>
+              <li>Thư mục dùng chung cho cả nhóm</li>
+            </ul>
+
+            <button class="btn btn-outline mt-auto">Bắt đầu dùng Nhóm</button>
+          </li>
+        </ul>
+      </div>
     </section>
+
 
     <section aria-labelledby="cau-hoi-title" class="section">
-      <h2 id="cau-hoi-title" class="font-display text-h2 text-ink">Câu hỏi hay gặp</h2>
-      <ul>
-        <li>
-          <h3><button aria-expanded="true" class="text-ink">Người nhận file có cần tạo tài khoản không?</button></h3>
-          <p class="text-muted">Không cần. Người nhận chỉ cần bấm vào link là tải được ngay, không phải đăng nhập hay cài thêm gì.</p>
-        </li>
-        <li>
-          <h3><button aria-expanded="true" class="text-ink">File của mình có bị người lạ xem được không?</button></h3>
-          <p class="text-muted">Bạn có thể đặt mật khẩu cho từng link chia sẻ. Ai không có mật khẩu thì không mở file được, kể cả khi có đúng link.</p>
-        </li>
-        <li>
-          <h3><button aria-expanded="true" class="text-ink">File để lâu không ai tải thì có bị xoá không?</button></h3>
-          <p class="text-muted">Gói Cơ bản file tự xoá sau 7 ngày nếu không ai tải. Gói Tiêu chuẩn và Nhóm bạn tự chọn thời gian lưu, kể cả lưu vĩnh viễn.</p>
-        </li>
-        <li>
-          <h3><button aria-expanded="true" class="text-ink">Đang dùng gói trả phí, huỷ giữa tháng được không?</button></h3>
-          <p class="text-muted">Được. Bạn huỷ lúc nào cũng được, không mất thêm phí phạt, dùng hết tới ngày cuối của tháng đã đóng tiền rồi tự chuyển về gói Cơ bản.</p>
-        </li>
-        <li>
-          <h3><button aria-expanded="true" class="text-ink">Gói Cơ bản giới hạn dung lượng file bao nhiêu?</button></h3>
-          <p class="text-muted">Mỗi file tối đa 2GB, đủ cho hầu hết file ảnh, PDF, video ngắn. Cần gửi file lớn hơn thì nâng lên gói Tiêu chuẩn.</p>
-        </li>
-        <li>
-          <h3><button aria-expanded="true" class="text-ink">Có xem được file của mình đã được tải chưa không?</button></h3>
-          <p class="text-muted">Có. Mỗi link chia sẻ đều có bảng ghi lại số lượt tải và thời gian tải gần nhất. DataBox không hiển thị danh tính người tải, chỉ cho biết file đã được mở hay chưa.</p>
-        </li>
-      </ul>
+      <div class="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
+        <div class="flex flex-col gap-3">
+          <h2 id="cau-hoi-title" class="font-display text-h2 text-ink">Câu hỏi hay gặp</h2>
+          <p class="text-muted">Chưa thấy câu trả lời bạn cần? <a href="#" class="font-semibold text-brand-600 hover:text-brand-800">Liên hệ với chúng tôi</a>.</p>
+        </div>
+
+        <ul class="flex flex-col divide-y divide-line">
+          <li class="flex flex-col gap-2 py-5">
+            <h3><button aria-expanded="true" class="text-ink">Người nhận file có cần tạo tài khoản không?</button></h3>
+            <p class="text-muted">Không cần. Người nhận chỉ cần bấm vào link là tải được ngay, không phải đăng nhập hay cài thêm gì.</p>
+          </li>
+
+          <li class="flex flex-col gap-2 py-5">
+            <h3><button aria-expanded="true" class="text-ink">File của mình có bị người lạ xem được không?</button></h3>
+            <p class="text-muted">Bạn có thể đặt mật khẩu cho từng link chia sẻ. Ai không có mật khẩu thì không mở file được, kể cả khi có đúng link.</p>
+          </li>
+
+          <li class="flex flex-col gap-2 py-5">
+            <h3><button aria-expanded="true" class="text-ink">File để lâu không ai tải thì có bị xoá không?</button></h3>
+            <p class="text-muted">Gói Cơ bản file tự xoá sau 7 ngày nếu không ai tải. Gói Tiêu chuẩn và Nhóm bạn tự chọn thời gian lưu, kể cả lưu vĩnh viễn.</p>
+          </li>
+
+          <li class="flex flex-col gap-2 py-5">
+            <h3><button aria-expanded="true" class="text-ink">Đang dùng gói trả phí, huỷ giữa tháng được không?</button></h3>
+            <p class="text-muted">Được. Bạn huỷ lúc nào cũng được, không mất thêm phí phạt, dùng hết tới ngày cuối của tháng đã đóng tiền rồi tự chuyển về gói Cơ bản.</p>
+          </li>
+
+          <li class="flex flex-col gap-2 py-5">
+            <h3><button aria-expanded="true" class="text-ink">Gói Cơ bản giới hạn dung lượng file bao nhiêu?</button></h3>
+            <p class="text-muted">Mỗi file tối đa 2GB, đủ cho hầu hết file ảnh, PDF, video ngắn. Cần gửi file lớn hơn thì nâng lên gói Tiêu chuẩn.</p>
+          </li>
+
+          <li class="flex flex-col gap-2 py-5">
+            <h3><button aria-expanded="true" class="text-ink">Có xem được file của mình đã được tải chưa không?</button></h3>
+            <p class="text-muted">Có. Mỗi link chia sẻ đều có bảng ghi lại số lượt tải và thời gian tải gần nhất. DataBox không hiển thị danh tính người tải, chỉ cho biết file đã được mở hay chưa.</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <section aria-labelledby="cta-title" class="section">
-      <h2 id="cta-title" class="font-display text-h2 text-ink">…</h2>
+
+    <section aria-labelledby="cta-title" class="section rounded-card bg-brand-600 text-center">
+      <div class="mx-auto flex max-w-2xl flex-col items-center gap-6">
+        <h2 id="cta-title" class="font-display text-h2 font-bold text-white">Gửi file đầu tiên ngay bây giờ</h2>
+        <p class="text-brand-50">Đăng ký mất 20 giây, không cần thẻ ngân hàng, dùng miễn phí ngay hôm nay.</p>
+        <button class="btn bg-white text-brand-600 hover:bg-brand-50">Tạo tài khoản miễn phí</button>
+      </div>
     </section>
+
   </main>
 
+
   <footer class="section">
-    <ul>
-      <li><a href="#">…</a></li>
-      <li><a href="#">…</a></li>
-    </ul>
+    <div class="flex flex-col gap-14">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+
+        <div class="flex flex-col gap-3">
+          <a href="#" class="flex items-center gap-2 font-display text-lg font-bold text-brand-600">
+            <img src="./assets/img/DBlogo.png" alt="" class="h-8 w-8">
+            DataBox
+          </a>
+          <p class="text-sm text-muted">Chia sẻ file lớn an toàn, biết ngay khi nào file được mở.</p>
+        </div>
+
+        <nav aria-labelledby="footer-san-pham-title" class="flex flex-col gap-3">
+          <h3 id="footer-san-pham-title" class="text-sm font-semibold text-ink">Sản phẩm</h3>
+
+          <ul class="flex flex-col gap-2 text-sm text-muted">
+            <li><a href="#tinh-nang-title" class="hover:text-brand-600">Tính năng</a></li>
+            <li><a href="#bang-gia-title" class="hover:text-brand-600">Bảng giá</a></li>
+            <li><a href="#cau-hoi-title" class="hover:text-brand-600">Câu hỏi</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="footer-ho-tro-title" class="flex flex-col gap-3">
+          <h3 id="footer-ho-tro-title" class="text-sm font-semibold text-ink">Hỗ trợ</h3>
+
+          <ul class="flex flex-col gap-2 text-sm text-muted">
+            <li><a href="#" class="hover:text-brand-600">Trung tâm trợ giúp</a></li>
+            <li><a href="#" class="hover:text-brand-600">Điều khoản sử dụng</a></li>
+            <li><a href="#" class="hover:text-brand-600">Chính sách bảo mật</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="footer-lien-he-title" class="flex flex-col gap-3">
+          <h3 id="footer-lien-he-title" class="text-sm font-semibold text-ink">Liên hệ</h3>
+
+          <ul class="flex flex-col gap-2 text-sm text-muted">
+            <li><a href="#" class="hover:text-brand-600">hi@databox.vn</a></li>
+            <li><a href="#" class="hover:text-brand-600">0900 000 000</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <p class="border-t border-line pt-8 text-center text-sm text-muted">© 2026 DataBox. Bảo lưu mọi quyền.</p>
+    </div>
   </footer>
 </body>
 </html>
