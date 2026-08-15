@@ -13,7 +13,7 @@
 <body>
   <a href="#main">Bỏ qua đến nội dung chính</a>
 
-  <header class="section">
+  <header>
     <nav aria-label="Điều hướng chính" class="mx-auto w-full max-w-6xl px-5 py-4 lg:py-6 flex items-center justify-between">
       <a href="#" class="flex items-center gap-2 font-display text-xl font-bold text-brand-600">
         <img src="./assets/img/DBlogo.png" alt="" class="h-10 w-10">
@@ -28,10 +28,15 @@
         <li><a href="#" class="hover:text-brand-600">Câu hỏi</a></li>
       </ul>
 
-      <div class="flex items-center gap-4">
-        <a href="#" class="hidden text-sm font-medium text-ink hover:text-brand-600 lg:inline">Đăng nhập</a>
-        <button class="btn btn-primary">Bắt đầu miễn phí</button>
-      </div>
+<div class="flex items-center gap-4">
+  <a href="#" class="hidden text-sm font-medium text-ink hover:text-brand-600 lg:inline">Đăng nhập</a>
+  <button class="btn btn-primary px-3 py-2 text-xs sm:px-5 sm:py-2.5 sm:text-sm">Bắt đầu miễn phí</button>
+  <button class="lg:hidden" aria-label="Mở menu điều hướng">
+    <svg class="h-6 w-6 text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
+</div>
     </nav>
   </header>
 
@@ -253,12 +258,11 @@
     <section aria-labelledby="so-sanh-title" class="section">
       <div class="flex flex-col items-center gap-4 text-center">
         <h2 id="so-sanh-title" class="font-display text-h2 text-ink">Không phải đổi thói quen, chỉ là gửi file tốt hơn</h2>
-        <p class="max-w-xl text-muted">Vẫn gửi qua Zalo hay email được, chỉ là bạn sẽ hết phải nhắn hỏi khách đã tải chưa.</p>
-      </div>
-
+      <p class="max-w-xl text-muted">Vẫn gửi qua Zalo hay email được, chỉ là bạn sẽ hết phải nhắn hỏi khách đã tải chưa.</p>
+      <p class="mt-2 text-sm text-muted lg:hidden">Vuốt ngang để xem hết bảng.</p>
+        </div>
       <div class="mt-14 overflow-x-auto">
-        <table class="w-full border-collapse overflow-hidden rounded-card border-2 border-line text-left">
-          <caption class="sr-only">So sánh gửi file qua Zalo/Email và DataBox gói Tiêu chuẩn</caption>
+        <table class="min-w-[640px] w-full border-collapse overflow-hidden rounded-card border-2 border-line text-left">          <caption class="sr-only">So sánh gửi file qua Zalo/Email và DataBox gói Tiêu chuẩn</caption>
 
           <thead>
             <tr class="border-b border-line bg-surface">
@@ -311,7 +315,7 @@
       <div class="flex flex-col gap-10">
         <h2 id="bang-gia-title" class="font-display text-h2 text-ink">Chọn gói vừa với nhu cầu, không trả tiền cho thứ không dùng</h2>
 
-        <ul class="grid items-stretch gap-6 lg:grid-cols-3">
+          <ul class="grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <li class="card flex h-full flex-col gap-4">
             <h3 class="font-display text-h3 text-ink">Cơ bản</h3>
             <p class="text-ink">0đ /tháng</p>
