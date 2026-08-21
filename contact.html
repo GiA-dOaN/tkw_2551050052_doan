@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên hệ — DataBox</title>
+  <link rel="stylesheet" href="./dist/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <a href="#main">Bỏ qua đến nội dung chính</a>
+
+  <header class="sticky top-0 z-50 border-b border-line bg-brand-200 shadow-sm dark:bg-brand-950">
+    <nav aria-label="Điều hướng chính" class="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 lg:py-6">
+      <a href="index.html" class="flex min-w-0 items-center gap-2 font-display text-xl font-bold text-brand-600">
+        <img src="./assets/img/DBlogo.png" alt="" class="h-10 w-10 shrink-0">
+        DataBox
+      </a>
+      <ul class="hidden items-center gap-8 text-sm font-medium lg:flex">
+        <li><a href="index.html#tinh-nang-title" class="hover:text-brand-600">Tính năng</a></li>
+        <li><a href="index.html#so-lieu-title" class="hover:text-brand-600">Số liệu</a></li>
+        <li><a href="index.html#cam-nhan-title" class="hover:text-brand-600">Cảm nhận</a></li>
+        <li><a href="pricing.html" class="hover:text-brand-600">Bảng giá</a></li>
+        <li><a href="index.html#cau-hoi-title" class="hover:text-brand-600">Câu hỏi</a></li>
+      </ul>
+      <div class="flex items-center gap-4">
+        <a href="#" class="hidden text-sm font-medium text-ink hover:text-brand-600 lg:inline">Đăng nhập</a>
+        <button class="btn btn-primary hidden sm:inline-flex">Bắt đầu miễn phí</button>
+        <button class="lg:hidden" aria-label="Mở menu điều hướng">
+          <svg class="h-6 w-6 text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section aria-labelledby="lien-he-title" class="section">
+      <div class="flex flex-col items-center gap-3 text-center">
+        <p class="text-sm font-semibold text-brand-600">Liên hệ</p>
+        <h1 id="lien-he-title" class="font-display text-4xl text-ink sm:text-5xl lg:text-h1">Có câu hỏi gì, cứ nhắn cho tụi mình</h1>
+        <p class="max-w-xl text-muted">Dù bạn đang cân nhắc gói nào, gặp lỗi khi tải file, hay chỉ muốn góp ý — điền form bên dưới hoặc liên hệ trực tiếp theo thông tin ở cột bên phải.</p>
+      </div>
+
+      <div class="mt-14 grid min-w-0 gap-8 lg:grid-cols-[2fr_1fr]">
+        <form class="card flex flex-col gap-5" aria-describedby="form-luu-y">
+          <p id="form-luu-y" class="text-xs text-muted">Các trường có dấu <span class="text-red-600" aria-hidden="true">*</span> là bắt buộc.</p>
+
+          <div>
+            <label class="field-label" for="ho-ten">
+              Họ và tên <span class="text-red-600" aria-hidden="true">*</span>
+            </label>
+            <input class="field-input" id="ho-ten" name="hoTen" type="text"
+                   placeholder="Nguyễn Văn A" required autocomplete="name" minlength="2"
+                   aria-describedby="ho-ten-error">
+            <p class="field-error" id="ho-ten-error" role="alert"></p>
+          </div>
+
+          <div>
+            <label class="field-label" for="email">
+              Email <span class="text-red-600" aria-hidden="true">*</span>
+            </label>
+            <input class="field-input" id="email" name="email" type="email"
+                   placeholder="ban@congty.com" required autocomplete="email"
+                   aria-describedby="email-hint email-error">
+            <p class="mt-1.5 text-xs text-muted" id="email-hint">Dùng để gửi email xác nhận và phản hồi yêu cầu của bạn.</p>
+            <p class="field-error" id="email-error" role="alert"></p>
+          </div>
+
+          <div>
+            <label class="field-label" for="dien-thoai">
+              Số điện thoại <span class="text-red-600" aria-hidden="true">*</span>
+            </label>
+            <input class="field-input" id="dien-thoai" name="dienThoai" type="tel" required
+                   pattern="0[0-9]{9}" autocomplete="tel" inputmode="numeric"
+                   placeholder="0912345678"
+                   aria-describedby="dien-thoai-hint dien-thoai-error">
+            <p class="mt-1.5 text-xs text-muted" id="dien-thoai-hint">Chúng tôi gọi qua số này, không nhắn tin quảng cáo.</p>
+            <p class="field-error" id="dien-thoai-error" role="alert"></p>
+          </div>
+
+          <div>
+            <label class="field-label" for="topic">
+              Chủ đề <span class="text-red-600" aria-hidden="true">*</span>
+            </label>
+            <select id="topic" name="topic" class="field-input" required aria-describedby="topic-error">
+              <option value="" disabled selected>— Chọn một chủ đề —</option>
+              <option>Hỏi về gói cước</option>
+              <option>Gặp lỗi khi dùng DataBox</option>
+              <option>Hợp tác / báo chí</option>
+              <option>Khác</option>
+            </select>
+            <p class="field-error" id="topic-error" role="alert"></p>
+          </div>
+
+          <div>
+            <label class="field-label" for="message">
+              Nội dung <span class="text-red-600" aria-hidden="true">*</span>
+            </label>
+            <textarea id="message" name="message" rows="5" class="field-input"
+                      placeholder="Bạn cần hỗ trợ gì?" required minlength="10"
+                      aria-describedby="message-hint message-error"></textarea>
+            <p class="mt-1.5 text-xs text-muted" id="message-hint">Mô tả càng chi tiết, tụi mình phản hồi càng nhanh và chính xác.</p>
+            <p class="field-error" id="message-error" role="alert"></p>
+          </div>
+
+          <div>
+            <div class="flex items-start gap-3">
+              <input id="dong-y" name="dongY" type="checkbox" required
+                     class="mt-0.5 h-4 w-4 shrink-0 rounded border-line text-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-500 dark:border-line-invert dark:bg-canvas-dark"
+                     aria-describedby="dong-y-error">
+              <label for="dong-y" class="text-sm text-ink">
+                Tôi đồng ý được DataBox liên hệ lại qua email hoặc điện thoại về nội dung đã gửi. <span class="text-red-600" aria-hidden="true">*</span>
+              </label>
+            </div>
+            <p class="field-error" id="dong-y-error" role="alert"></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary self-start">Gửi liên hệ</button>
+        </form>
+
+        <div class="card flex flex-col gap-6">
+          <h2 class="font-display text-h3 text-ink">Thông tin liên hệ</h2>
+          <ul class="flex flex-col gap-4 border-t border-line pt-5 text-sm">
+            <li class="flex items-start gap-3">
+              <span class="icon-dot mt-0.5 shrink-0">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>
+              </span>
+              <span>
+                <span class="block font-semibold text-ink">Email hỗ trợ</span>
+                <span class="text-muted">ho-tro@databox.vn</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="icon-dot mt-0.5 shrink-0">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.8 2Z"/></svg>
+              </span>
+              <span>
+                <span class="block font-semibold text-ink">Hotline</span>
+                <span class="text-muted">1900 6868 (7:30 – 21:00, cả tuần)</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="icon-dot mt-0.5 shrink-0">
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <span>
+                <span class="block font-semibold text-ink">Văn phòng</span>
+                <span class="text-muted">Quận 1, TP. Hồ Chí Minh</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="sau-khi-gui-title" class="section pt-0">
+      <div class="flex flex-col items-center gap-4 text-center">
+        <h2 id="sau-khi-gui-title" class="font-display text-3xl text-ink sm:text-4xl lg:text-h2">Sau khi gửi thì sao?</h2>
+      </div>
+      <ul class="mt-10 grid gap-6 sm:grid-cols-3">
+        <li class="card flex flex-col gap-3">
+          <span class="badge self-start bg-brand-50 text-brand-600 dark:bg-brand-950 dark:text-brand-500">Bước 1</span>
+          <p class="text-sm text-muted">Bạn nhận email xác nhận đã gửi thành công trong vòng vài phút, kèm mã yêu cầu để tiện theo dõi.</p>
+        </li>
+        <li class="card flex flex-col gap-3">
+          <span class="badge self-start bg-brand-50 text-brand-600 dark:bg-brand-950 dark:text-brand-500">Bước 2</span>
+          <p class="text-sm text-muted">Đội hỗ trợ phản hồi trong giờ làm việc, chậm nhất là 1 ngày làm việc kể từ lúc gửi.</p>
+        </li>
+        <li class="card flex flex-col gap-3">
+          <span class="badge self-start bg-brand-50 text-brand-600 dark:bg-brand-950 dark:text-brand-500">Bước 3</span>
+          <p class="text-sm text-muted">Nếu cần thêm thông tin (ảnh chụp lỗi, số tài khoản…), tụi mình sẽ trả lời ngay trong cùng email đó.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="section">
+    <div class="flex flex-col gap-14">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="flex flex-col gap-3">
+          <a href="index.html" class="flex items-center gap-2 font-display text-lg font-bold text-brand-600">
+            <img src="./assets/img/DBlogo.png" alt="" class="h-8 w-8">
+            DataBox
+          </a>
+          <p class="text-sm text-muted">Chia sẻ file lớn an toàn, biết ngay khi nào file được mở.</p>
+        </div>
+        <nav aria-labelledby="footer-san-pham-title" class="flex flex-col gap-3">
+          <h3 id="footer-san-pham-title" class="text-sm font-semibold text-ink">Sản phẩm</h3>
+          <ul class="flex flex-col gap-2 text-sm text-muted">
+            <li><a href="index.html#tinh-nang-title" class="hover:text-brand-600">Tính năng</a></li>
+            <li><a href="pricing.html" class="hover:text-brand-600">Bảng giá</a></li>
+            <li><a href="index.html#cau-hoi-title" class="hover:text-brand-600">Câu hỏi</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="footer-ho-tro-title" class="flex flex-col gap-3">
+          <h3 id="footer-ho-tro-title" class="text-sm font-semibold text-ink">Hỗ trợ</h3>
+          <ul class="flex flex-col gap-2 text-sm text-muted">
+            <li><a href="#" class="hover:text-brand-600">Trung tâm trợ giúp</a></li>
+            <li><a href="#" class="hover:text-brand-600">Điều khoản sử dụng</a></li>
+            <li><a href="#" class="hover:text-brand-600">Chính sách bảo mật</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="footer-lien-he-title" class="flex flex-col gap-3">
+          <h3 id="footer-lien-he-title" class="text-sm font-semibold text-ink">Liên hệ</h3>
+          <ul class="flex flex-col gap-2 text-sm text-muted">
+            <li><a href="contact.html" class="hover:text-brand-600">Gửi liên hệ</a></li>
+            <li><a href="#" class="hover:text-brand-600">hi@databox.vn</a></li>
+            <li><a href="#" class="hover:text-brand-600">0900 000 000</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="border-t border-line pt-8 text-center text-sm text-muted">© 2026 DataBox. Bảo lưu mọi quyền.</p>
+    </div>
+  </footer>
+</body>
+</html>
