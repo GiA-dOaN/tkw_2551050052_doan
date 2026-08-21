@@ -81,6 +81,12 @@
   .field-input {
     @apply w-full rounded-lg border border-line bg-canvas px-4 py-2.5 text-sm text-ink placeholder-muted transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 dark:border-line-invert dark:bg-canvas-dark;
   }
+  .field-input {
+  @apply w-full rounded-lg border border-line bg-canvas px-4 py-2.5 text-sm text-ink placeholder-muted transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 dark:border-line-invert dark:bg-canvas-dark;
+}
+  .field-error {
+  @apply mt-1.5 text-xs font-medium text-red-600 empty:hidden;
+}
 }
 
 @layer base {
@@ -104,5 +110,4 @@
   h1, h2, h3 {
     @apply font-display tracking-tight;
   }
-
 }

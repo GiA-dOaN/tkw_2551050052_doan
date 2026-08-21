@@ -47,33 +47,82 @@
       </div>
 
       <div class="mt-14 grid min-w-0 gap-8 lg:grid-cols-[2fr_1fr]">
-        <!-- Form liên hệ -->
-        <form class="card flex flex-col gap-5" novalidate>
+        <form class="card flex flex-col gap-5" aria-describedby="form-luu-y">
+          <p id="form-luu-y" class="text-xs text-muted">Các trường có dấu <span class="text-red-600" aria-hidden="true">*</span> là bắt buộc.</p>
+
           <div>
-            <label for="name" class="field-label">Họ và tên</label>
-            <input type="text" id="name" name="name" class="field-input" placeholder="Nguyễn Văn A" required>
+            <label class="field-label" for="ho-ten">
+              Họ và tên <span class="text-red-600" aria-hidden="true">*</span>
+            </label>
+            <input class="field-input" id="ho-ten" name="hoTen" type="text"
+                   placeholder="Nguyễn Văn A" required autocomplete="name" minlength="2"
+                   aria-describedby="ho-ten-error">
+            <p class="field-error" id="ho-ten-error" role="alert"></p>
           </div>
+
           <div>
-            <label for="email" class="field-label">Email</label>
-            <input type="email" id="email" name="email" class="field-input" placeholder="ban@congty.com" required>
+            <label class="field-label" for="email">
+              Email <span class="text-red-600" aria-hidden="true">*</span>
+            </label>
+            <input class="field-input" id="email" name="email" type="email"
+                   placeholder="ban@congty.com" required autocomplete="email"
+                   aria-describedby="email-hint email-error">
+            <p class="mt-1.5 text-xs text-muted" id="email-hint">Dùng để gửi email xác nhận và phản hồi yêu cầu của bạn.</p>
+            <p class="field-error" id="email-error" role="alert"></p>
           </div>
+
           <div>
-            <label for="topic" class="field-label">Chủ đề</label>
-            <select id="topic" name="topic" class="field-input">
+            <label class="field-label" for="dien-thoai">
+              Số điện thoại <span class="text-red-600" aria-hidden="true">*</span>
+            </label>
+            <input class="field-input" id="dien-thoai" name="dienThoai" type="tel" required
+                   pattern="0[0-9]{9}" autocomplete="tel" inputmode="numeric"
+                   placeholder="0912345678"
+                   aria-describedby="dien-thoai-hint dien-thoai-error">
+            <p class="mt-1.5 text-xs text-muted" id="dien-thoai-hint">Chúng tôi gọi qua số này, không nhắn tin quảng cáo.</p>
+            <p class="field-error" id="dien-thoai-error" role="alert"></p>
+          </div>
+
+          <div>
+            <label class="field-label" for="topic">
+              Chủ đề <span class="text-red-600" aria-hidden="true">*</span>
+            </label>
+            <select id="topic" name="topic" class="field-input" required aria-describedby="topic-error">
+              <option value="" disabled selected>— Chọn một chủ đề —</option>
               <option>Hỏi về gói cước</option>
               <option>Gặp lỗi khi dùng DataBox</option>
               <option>Hợp tác / báo chí</option>
               <option>Khác</option>
             </select>
+            <p class="field-error" id="topic-error" role="alert"></p>
           </div>
+
           <div>
-            <label for="message" class="field-label">Nội dung</label>
-            <textarea id="message" name="message" rows="5" class="field-input" placeholder="Bạn cần hỗ trợ gì?" required></textarea>
+            <label class="field-label" for="message">
+              Nội dung <span class="text-red-600" aria-hidden="true">*</span>
+            </label>
+            <textarea id="message" name="message" rows="5" class="field-input"
+                      placeholder="Bạn cần hỗ trợ gì?" required minlength="10"
+                      aria-describedby="message-hint message-error"></textarea>
+            <p class="mt-1.5 text-xs text-muted" id="message-hint">Mô tả càng chi tiết, tụi mình phản hồi càng nhanh và chính xác.</p>
+            <p class="field-error" id="message-error" role="alert"></p>
           </div>
+
+          <div>
+            <div class="flex items-start gap-3">
+              <input id="dong-y" name="dongY" type="checkbox" required
+                     class="mt-0.5 h-4 w-4 shrink-0 rounded border-line text-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-500 dark:border-line-invert dark:bg-canvas-dark"
+                     aria-describedby="dong-y-error">
+              <label for="dong-y" class="text-sm text-ink">
+                Tôi đồng ý được DataBox liên hệ lại qua email hoặc điện thoại về nội dung đã gửi. <span class="text-red-600" aria-hidden="true">*</span>
+              </label>
+            </div>
+            <p class="field-error" id="dong-y-error" role="alert"></p>
+          </div>
+
           <button type="submit" class="btn btn-primary self-start">Gửi liên hệ</button>
         </form>
 
-        <!-- Thông tin liên hệ -->
         <div class="card flex flex-col gap-6">
           <h2 class="font-display text-h3 text-ink">Thông tin liên hệ</h2>
           <ul class="flex flex-col gap-4 border-t border-line pt-5 text-sm">
@@ -109,7 +158,6 @@
       </div>
     </section>
 
-    <!-- Sau khi gửi thì sao -->
     <section aria-labelledby="sau-khi-gui-title" class="section pt-0">
       <div class="flex flex-col items-center gap-4 text-center">
         <h2 id="sau-khi-gui-title" class="font-display text-3xl text-ink sm:text-4xl lg:text-h2">Sau khi gửi thì sao?</h2>
