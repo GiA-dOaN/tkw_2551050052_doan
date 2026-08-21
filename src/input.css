@@ -1,59 +1,102 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  --color-brand-50:  #eff9ff;
+  --color-brand-50: #eff9ff;
   --color-brand-100: #def2ff;
-  --color-brand-500: #00aaf2;  
+  --color-brand-200: #b8e7ff;
+  --color-brand-300: #79d5ff;
+  --color-brand-500: #00aaf2;
   --color-brand-600: #008fd4;
   --color-brand-800: #005e8d;
   --color-brand-950: #04314d;
-  --color-accent-50:  #fef6ee;
+
+  --color-accent-50: #fef6ee;
   --color-accent-100: #fdebd7;
-  --color-accent-400: #f29556;  
+  --color-accent-400: #f29556;
   --color-accent-500: #ed6c22;
   --color-accent-600: #de5318;
   --color-accent-900: #762c18;
-  --color-ink: #000000;
-  --color-muted: #464646;
-  --color-surface: #f6f6f5;
-  --color-line: #000000;
+
+  --color-ink: #12211d;
+  --color-ink-invert: #eaf2ee;
+  --color-muted: #4f5750;
+  --color-muted-invert: #a9b6ae;
+  --color-line: #dfe6e2;
+  --color-line-invert: #2a3942;
+  --color-canvas: #ffffff;
+  --color-canvas-dark: #0a151c;
+  --color-surface: #f7fcff;
+  --color-surface-dark: #14262f;
 
   --font-display: "Shantell Sans", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 
-  --text-h1: 3.75rem; 
-  --text-h2: 2.25rem;  
-  --text-h3: 1.25rem;   
+  --text-h1: 3.75rem;
+  --text-h2: 2.25rem;
+  --text-h3: 1.25rem;
 
-  --spacing-section-lg: 6rem;  
+  --spacing-section-lg: 6rem;
   --spacing-section-sm: 4rem;
 
-  --radius-card: 0.875rem;  
-  --radius-pill: 999px;     
+  --radius-card: 0.875rem;
+  --radius-pill: 999px;
 }
 
 @layer components {
-    .section { @apply mx-auto w-full max-w-6xl px-5 py-20 lg:py-28;}
-    .btn { @apply inline-flex items-center justify-center gap-2 rounded-pill px-5 py-2.5 text-sm font-semibold transition-colors;}
-    .btn-primary { @apply bg-brand-600 text-white hover:bg-brand-800;}
-    .btn-outline { @apply border border-line hover:bg-surface; }
-    .card { @apply rounded-card border border-line bg-white p-6; }
-    .badge { @apply rounded-full px-3 py-1 text-xs font-semibold; }
-    .logo-item { @apply h-8 w-auto max-w-24 object-contain grayscale transition hover:grayscale-0; }
+  .section {
+    @apply mx-auto w-full max-w-6xl px-5 py-20 lg:py-28;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-pill px-5 py-2.5 text-sm font-semibold transition-colors;
+  }
+  .btn-primary {
+    @apply bg-brand-600 text-white hover:bg-brand-800;
+  }
+  .btn-outline {
+    @apply border border-line hover:bg-surface dark:border-line-invert dark:hover:bg-surface-dark;
+  }
+  .card {
+    @apply rounded-card border border-line bg-surface p-6 dark:border-line-invert dark:bg-surface-dark;
+  }
+  .avatar {
+    @apply bg-surface object-cover dark:bg-surface-dark;
+  }
+  .badge {
+    @apply rounded-full px-3 py-1 text-xs font-semibold;
+  }
+  .logo-item {
+    @apply h-8 w-auto max-w-24 object-contain grayscale transition hover:grayscale-0;
+  }
+  .icon-dot {
+    @apply grid h-5 w-5 place-items-center rounded-full bg-brand-50 text-brand-600 dark:bg-brand-950 dark:text-brand-500;
+  }
+  .compare-highlight {
+    @apply bg-brand-50 text-brand-800 dark:bg-brand-950 dark:text-brand-100;
+  }
 }
 
-
-@layer base{
+@layer base {
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
   }
 
-  body{
-    @apply bg-surface text-ink font-body antialiased;
+  .dark {
+    --color-ink: var(--color-ink-invert);
+    --color-muted: var(--color-muted-invert);
+    --color-line: var(--color-line-invert);
+    --color-canvas: var(--color-canvas-dark);
+    --color-surface: var(--color-surface-dark);
   }
 
-  h1,h2,h3{
+  body {
+    @apply bg-canvas text-ink font-body antialiased;
+  }
+
+  h1, h2, h3 {
     @apply font-display tracking-tight;
   }
+
 }
