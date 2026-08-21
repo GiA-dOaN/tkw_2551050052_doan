@@ -75,6 +75,12 @@
   .compare-highlight {
     @apply bg-brand-50 text-brand-800 dark:bg-brand-950 dark:text-brand-100;
   }
+  .field-label {
+    @apply mb-1.5 block text-sm font-semibold text-ink;
+  }
+  .field-input {
+    @apply w-full rounded-lg border border-line bg-canvas px-4 py-2.5 text-sm text-ink placeholder-muted transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 dark:border-line-invert dark:bg-canvas-dark;
+  }
 }
 
 @layer base {
