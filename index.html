@@ -11,26 +11,26 @@
 </head>
 
 <body>
+<span id="nav-sentinel" aria-hidden="true" class="pointer-events-none absolute left-0 top-0 h-px w-full"></span>
   <a href="#main">Bỏ qua đến nội dung chính</a>
 
   <header class="sticky top-0 z-50 border-b border-line bg-brand-200 shadow-sm dark:bg-brand-950">
     <nav aria-label="Điều hướng chính" class="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 lg:py-6">
-      <a href="#" class="flex min-w-0 items-center gap-2 font-display text-xl font-bold text-brand-600">
+            <a href="index.html" class="flex min-w-0 items-center gap-2 font-display text-xl font-bold text-brand-600">
         <img src="./assets/img/DBlogo.png" alt="" class="h-10 w-10 shrink-0">
         DataBox
       </a>
-      <ul class="hidden items-center gap-8 text-sm font-medium lg:flex">
-        <li><a href="#" class="hover:text-brand-600">Tính năng</a></li>
-        <li><a href="#" class="hover:text-brand-600">Số liệu</a></li>
-        <li><a href="#" class="hover:text-brand-600">Cảm nhận</a></li>
+      <ul id="nav-mobile" class="hidden items-center gap-8 text-sm font-medium lg:flex">
+        <li><a href="#tinh-nang-title" class="hover:text-brand-600">Tính năng</a></li>
+        <li><a href="#so-lieu-title" class="hover:text-brand-600">Số liệu</a></li>
+        <li><a href="#cam-nhan-title" class="hover:text-brand-600">Cảm nhận</a></li>
         <li><a href="pricing.html" class="hover:text-brand-600">Bảng giá</a></li>
-        <li><a href="#" class="hover:text-brand-600">Câu hỏi</a></li>
+        <li><a href="#cau-hoi-title" class="hover:text-brand-600">Câu hỏi</a></li>
       </ul>
       <div class="flex items-center gap-4">
         <a href="#" class="hidden text-sm font-medium text-ink hover:text-brand-600 lg:inline">Đăng nhập</a>
         <button class="btn btn-primary hidden sm:inline-flex">Bắt đầu miễn phí</button>
-        <button class="lg:hidden" aria-label="Mở menu điều hướng">
-          <svg class="h-6 w-6 text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+<button class="lg:hidden" aria-controls="nav-mobile" aria-expanded="false" aria-label="Mở menu điều hướng">          <svg class="h-6 w-6 text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </button>
@@ -166,7 +166,7 @@
         <p class="mt-2 text-sm text-muted lg:hidden">Vuốt ngang để xem hết bảng.</p>
       </div>
       <div class="mt-14 max-w-full overflow-x-auto">
-        <table class="min-w-[640px] w-full border-collapse overflow-hidden rounded-card border-2 border-line bg-surface dark:border-line-invert dark:bg-surface-dark text-left">
+        <table class="min-w-160 w-full border-collapse overflow-hidden rounded-card border-2 border-line bg-surface dark:border-line-invert dark:bg-surface-dark text-left">
           <caption class="sr-only">So sánh gửi file qua Zalo/Email và DataBox gói Tiêu chuẩn</caption>
           <thead>
             <tr class="border-b border-line bg-surface dark:border-line-invert dark:bg-surface-dark">
@@ -300,5 +300,11 @@
       <p class="border-t border-line pt-8 text-center text-sm text-muted">© 2026 DataBox. Bảo lưu mọi quyền.</p>
     </div>
   </footer>
+<button id="nut-len-dau" class="to-top btn btn-primary fixed bottom-6 right-6 rounded-full! p-3! shadow-lg" aria-label="Lên đầu trang">    
+  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+   <script type="module" src="./js/main.js"></script>
 </body>
 </html>

@@ -86,6 +86,32 @@
 }
   .field-error {
   @apply mt-1.5 text-xs font-medium text-red-600 empty:hidden;
+
+  .to-top {
+    @apply opacity-0 pointer-events-none transition-opacity duration-200;
+  }
+  .to-top.is-visible {
+    @apply opacity-100 pointer-events-auto;
+  }
+
+  header.is-scrolled {
+    @apply shadow-md;
+  }
+
+  @media (max-width: 1023px) {
+    #nav-mobile:not(.hidden) {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 100%;
+      gap: 1rem;
+      border-top: 1px solid var(--color-line);
+      background-color: var(--color-surface);
+      padding: 1rem 1.25rem;
+    }
+  }
 }
 }
 
