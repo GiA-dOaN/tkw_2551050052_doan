@@ -47,7 +47,9 @@
     --color-brand-600: #008fd4;
     --color-brand-800: #005e8d;
     --color-brand-950: #04314d;
+    --color-accent-100: #fdebd7;
     --color-accent-500: #ed6c22;
+    --color-accent-600: #de5318;
     --color-ink: #12211d;
     --color-ink-invert: #eaf2ee;
     --color-muted: #4f5750;
@@ -504,6 +506,9 @@
   .border-line {
     border-color: var(--color-line);
   }
+  .bg-accent-100 {
+    background-color: var(--color-accent-100);
+  }
   .bg-brand-50 {
     background-color: var(--color-brand-50);
   }
@@ -622,6 +627,9 @@
   }
   .text-accent-500 {
     color: var(--color-accent-500);
+  }
+  .text-accent-600 {
+    color: var(--color-accent-600);
   }
   .text-brand-50 {
     color: var(--color-brand-50);
@@ -1037,6 +1045,56 @@
       padding: 1rem 1.25rem;
     }
   }
+  .pricing-switch {
+    position: relative;
+    display: inline-flex;
+    height: calc(var(--spacing) * 6);
+    width: calc(var(--spacing) * 11);
+    flex-shrink: 0;
+    align-items: center;
+    border-radius: var(--radius-pill);
+    background-color: var(--color-line);
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    &:where(.dark, .dark *) {
+      background-color: var(--color-line-invert);
+    }
+  }
+  .pricing-switch[aria-checked="true"] {
+    background-color: var(--color-brand-600);
+  }
+  .pricing-switch-thumb {
+    display: inline-block;
+    height: calc(var(--spacing) * 4);
+    width: calc(var(--spacing) * 4);
+    --tw-translate-x: var(--spacing);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    border-radius: calc(infinity * 1px);
+    background-color: var(--color-white);
+    transition-property: transform, translate, scale, rotate;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .pricing-switch[aria-checked="true"] .pricing-switch-thumb {
+    --tw-translate-x: calc(var(--spacing) * 6);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .reveal {
+    --tw-translate-y: calc(var(--spacing) * 4);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    opacity: 0%;
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 500ms;
+    transition-duration: 500ms;
+  }
+  .reveal.is-visible {
+    --tw-translate-y: 0px;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    opacity: 100%;
+  }
 }
 @layer base {
   html {
@@ -1199,6 +1257,21 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
@@ -1237,6 +1310,9 @@
       --tw-drop-shadow-alpha: 100%;
       --tw-drop-shadow-size: initial;
       --tw-duration: initial;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
       --tw-tracking: initial;
     }
   }

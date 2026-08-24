@@ -66,10 +66,25 @@
           <p class="max-w-xl text-muted">Ba gói đơn giản, không có phí ẩn. Nâng hoặc hạ gói bất cứ lúc nào, phần chênh lệch được tính lại ngay trong tháng.</p>
         </div>
 
+        <div class="flex items-center justify-center gap-3">
+          <span class="text-sm font-medium text-ink">Theo tháng</span>
+          <button type="button" role="switch" aria-checked="false"
+                  aria-label="Chuyển đổi chu kỳ thanh toán năm"
+                  class="pricing-switch">
+            <span class="pricing-switch-thumb"></span>
+          </button>
+          <span class="text-sm font-medium text-muted">
+            Theo năm <span class="badge bg-accent-100 text-accent-600">Tiết kiệm 2 tháng</span>
+          </span>
+        </div>
+
         <ul class="grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <li class="card flex h-full flex-col gap-4">
+          <li class="card reveal flex h-full flex-col gap-4">
             <h2 class="font-display text-h3 text-ink">Cơ bản</h2>
-            <p class="text-ink">0đ /tháng</p>
+            <p class="text-ink">
+              <span data-price data-monthly="0" data-yearly="0">0 đ</span>
+              <span data-price-suffix>/tháng</span>
+            </p>
             <p class="text-sm text-muted">Hợp cho việc gửi file lẻ tẻ, không thường xuyên.</p>
             <ul class="flex flex-col gap-2 border-t border-line pt-4 text-muted">
               <li class="flex items-center gap-3"><span class="icon-dot"><svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span>Tối đa 2GB mỗi file</li>
@@ -79,10 +94,13 @@
             <button class="btn btn-outline mt-auto">Bắt đầu miễn phí</button>
           </li>
 
-          <li class="card relative flex h-full flex-col gap-4 ring-2 ring-brand-600">
+          <li class="card reveal relative flex h-full flex-col gap-4 ring-2 ring-brand-600">
             <span class="badge absolute -top-3 left-6 bg-brand-600 text-white">Được chọn nhiều nhất</span>
             <h2 class="font-display text-h3 text-ink">Tiêu chuẩn</h2>
-            <p class="text-ink">49.000đ /tháng</p>
+            <p class="text-ink">
+              <span data-price data-monthly="49000" data-yearly="490000">49.000 đ</span>
+              <span data-price-suffix>/tháng</span>
+            </p>
             <p class="text-sm text-muted">Hợp cho freelancer, người gửi file cho khách hàng hàng ngày.</p>
             <ul class="flex flex-col gap-2 border-t border-line pt-4 text-muted">
               <li class="flex items-center gap-3"><span class="icon-dot"><svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span>Tối đa 20GB mỗi file</li>
@@ -93,9 +111,12 @@
             <button class="btn btn-primary mt-auto">Nâng cấp Tiêu chuẩn</button>
           </li>
 
-          <li class="card flex h-full flex-col gap-4">
+          <li class="card reveal flex h-full flex-col gap-4">
             <h2 class="font-display text-h3 text-ink">Nhóm</h2>
-            <p class="text-ink">129.000đ /tháng</p>
+            <p class="text-ink">
+              <span data-price data-monthly="129000" data-yearly="1290000">129.000 đ</span>
+              <span data-price-suffix>/tháng</span>
+            </p>
             <p class="text-sm text-muted">Hợp cho đội ngũ cần chia sẻ file qua lại với nhau mỗi ngày.</p>
             <ul class="flex flex-col gap-2 border-t border-line pt-4 text-muted">
               <li class="flex items-center gap-3"><span class="icon-dot"><svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span>Mọi quyền lợi gói Tiêu chuẩn</li>
