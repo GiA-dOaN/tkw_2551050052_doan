@@ -81,12 +81,76 @@
   .field-input {
     @apply w-full rounded-lg border border-line bg-canvas px-4 py-2.5 text-sm text-ink placeholder-muted transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 dark:border-line-invert dark:bg-canvas-dark;
   }
-  .field-input {
-  @apply w-full rounded-lg border border-line bg-canvas px-4 py-2.5 text-sm text-ink placeholder-muted transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 dark:border-line-invert dark:bg-canvas-dark;
-}
   .field-error {
-  @apply mt-1.5 text-xs font-medium text-red-600 empty:hidden;
-}
+    @apply mt-1.5 text-xs font-medium text-red-600 empty:hidden;
+  }
+  .theme-toggle {
+    @apply inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-ink transition-colors hover:bg-brand-100 dark:hover:bg-brand-950;
+  }
+  .icon-sun {
+    @apply hidden;
+  }
+  .dark .icon-moon {
+    @apply hidden;
+  }
+  .dark .icon-sun {
+    @apply block;
+  }
+  .faq-trigger {
+    @apply flex w-full items-center justify-between gap-4 text-left text-ink;
+  }
+  .faq-icon {
+    @apply h-4 w-4 shrink-0 text-muted transition-transform duration-200;
+  }
+  .faq-trigger[aria-expanded="true"] .faq-icon {
+    @apply -rotate-180;
+  }
+
+  .to-top {
+    @apply opacity-0 pointer-events-none transition-opacity duration-200;
+  }
+  .to-top.is-visible {
+    @apply opacity-100 pointer-events-auto;
+  }
+
+  header.is-scrolled {
+    @apply shadow-md;
+  }
+
+  @media (max-width: 1023px) {
+    #nav-mobile:not(.hidden) {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 100%;
+      gap: 1rem;
+      border-top: 1px solid var(--color-line);
+      background-color: var(--color-surface);
+      padding: 1rem 1.25rem;
+    }
+  }
+
+  .pricing-switch {
+    @apply relative inline-flex h-6 w-11 shrink-0 items-center rounded-pill bg-line transition-colors dark:bg-line-invert;
+  }
+  .pricing-switch[aria-checked="true"] {
+    @apply bg-brand-600;
+  }
+  .pricing-switch-thumb {
+    @apply inline-block h-4 w-4 translate-x-1 rounded-full bg-white transition-transform;
+  }
+  .pricing-switch[aria-checked="true"] .pricing-switch-thumb {
+    @apply translate-x-6;
+  }
+
+  .reveal {
+    @apply opacity-0 translate-y-4 transition-all duration-500;
+  }
+  .reveal.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
 }
 
 @layer base {

@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DataBox</title>
+  <script>
+  (function () {
+    const saved = localStorage.getItem("theme");
+    const dark = saved
+      ? saved === "dark"
+      : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.classList.toggle("dark", dark);
+  })();
+</script>
   <link rel="stylesheet" href="./dist/output.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,26 +20,36 @@
 </head>
 
 <body>
+<span id="nav-sentinel" aria-hidden="true" class="pointer-events-none absolute left-0 top-0 h-px w-full"></span>
   <a href="#main">Bỏ qua đến nội dung chính</a>
 
   <header class="sticky top-0 z-50 border-b border-line bg-brand-200 shadow-sm dark:bg-brand-950">
     <nav aria-label="Điều hướng chính" class="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 lg:py-6">
-      <a href="#" class="flex min-w-0 items-center gap-2 font-display text-xl font-bold text-brand-600">
+            <a href="index.html" class="flex min-w-0 items-center gap-2 font-display text-xl font-bold text-brand-600">
         <img src="./assets/img/DBlogo.png" alt="" class="h-10 w-10 shrink-0">
         DataBox
       </a>
-      <ul class="hidden items-center gap-8 text-sm font-medium lg:flex">
-        <li><a href="#" class="hover:text-brand-600">Tính năng</a></li>
-        <li><a href="#" class="hover:text-brand-600">Số liệu</a></li>
-        <li><a href="#" class="hover:text-brand-600">Cảm nhận</a></li>
+      <ul id="nav-mobile" class="hidden items-center gap-8 text-sm font-medium lg:flex">
+        <li><a href="#tinh-nang-title" class="hover:text-brand-600">Tính năng</a></li>
+        <li><a href="#so-lieu-title" class="hover:text-brand-600">Số liệu</a></li>
+        <li><a href="#cam-nhan-title" class="hover:text-brand-600">Cảm nhận</a></li>
         <li><a href="pricing.html" class="hover:text-brand-600">Bảng giá</a></li>
-        <li><a href="#" class="hover:text-brand-600">Câu hỏi</a></li>
+        <li><a href="#cau-hoi-title" class="hover:text-brand-600">Câu hỏi</a></li>
       </ul>
       <div class="flex items-center gap-4">
+        <button id="theme-toggle" type="button" class="theme-toggle" aria-pressed="false" aria-label="Chuyển sang giao diện tối">
+          <svg class="icon-moon" style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
+          </svg>
+          <svg class="icon-sun" style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+        </button>
         <a href="#" class="hidden text-sm font-medium text-ink hover:text-brand-600 lg:inline">Đăng nhập</a>
         <button class="btn btn-primary hidden sm:inline-flex">Bắt đầu miễn phí</button>
-        <button class="lg:hidden" aria-label="Mở menu điều hướng">
-          <svg class="h-6 w-6 text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <button class="lg:hidden" aria-controls="nav-mobile" aria-expanded="false" aria-label="Mở menu điều hướng">          
+            <svg class="h-6 w-6 text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </button>
@@ -75,22 +94,13 @@
           </ul>
           <p class="text-sm text-muted">Không cần cài thêm phần mềm hay công cụ ngoài, mọi thao tác nằm gọn trong 1 trang quản lý.</p>
         </div>
-        <div class="grid min-w-0 grid-cols-1 gap-4 sm:grid-cols-2">
-          <div class="rounded-card bg-surface dark:bg-surface-dark p-4">…</div>
-          <div class="rounded-card bg-surface dark:bg-surface-dark p-4">…</div>
-          <div class="rounded-card bg-surface dark:bg-surface-dark p-4">…</div>
-          <div class="rounded-card bg-surface dark:bg-surface-dark p-4">…</div>
-        </div>
+       <img src="./assets/img/feature1.png" alt="…" class="w-full rounded-card">
       </div>
     </section>
 
     <section aria-labelledby="tinh-nang-2-title" class="section">
       <div class="grid min-w-0 items-center gap-10 lg:grid-cols-2 lg:gap-16">
-        <div class="grid min-w-0 grid-cols-2 gap-4">
-          <div class="row-span-2 rounded-card bg-surface dark:bg-surface-dark p-4">…</div>
-          <div class="rounded-card bg-surface dark:bg-surface-dark p-4">…</div>
-          <div class="rounded-card bg-surface dark:bg-surface-dark p-4">…</div>
-        </div>
+       <img src="./assets/img/feature2.png" alt="…" class="w-full rounded-card">
         <div class="flex min-w-0 flex-col gap-6">
           <h2 id="tinh-nang-2-title" class="font-display text-3xl text-ink sm:text-4xl lg:text-h2">Gửi nhanh, không giới hạn nơi mở file</h2>
           <p class="text-muted">Kéo file vào, copy link, gửi qua đâu cũng được. Người nhận không cần cài gì thêm.</p>
@@ -141,23 +151,68 @@
       </div>
     </section>
 
-    <section aria-labelledby="cam-nhan-title" class="section">
-      <div class="flex flex-col items-center gap-8 text-center">
-        <h2 id="cam-nhan-title" class="sr-only">Cam kết của DataBox</h2>
-        <figure class="flex w-full flex-col items-center gap-6 rounded-card border-2 border-brand-100 bg-surface p-10">
-          <span class="grid h-12 w-12 place-items-center text-brand-600" aria-hidden="true">
-            <svg class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 4C6 4 3 7.1 3 10.9c0 3 2 5.4 4.6 6L9 20c-3.9-.6-7-3.9-7-8.5C2 6.3 5.6 2 10.5 2L9.5 4Zm10 0c-3.5 0-6.5 3.1-6.5 6.9 0 3 2 5.4 4.6 6l1.4 3.1c-3.9-.6-7-3.9-7-8.5C12 6.3 15.6 2 20.5 2L19.5 4Z"/></svg>
-          </span>
-          <blockquote class="font-display text-2xl font-medium text-ink lg:text-3xl">Trước đây gửi file dựng phim 1GB cho khách qua Zalo hay bị lỗi giữa chừng. Giờ gửi link DataBox, khách tải xong tôi thấy ngay trên bảng thống kê, khỏi phải nhắn hỏi lại.</blockquote>
-          <figcaption class="flex items-center gap-2 text-sm">
-            <img src="./assets/img/avatar-1.png" alt="" class="h-8 w-8 rounded-full">
-            <span class="font-semibold text-ink">Trần Minh Khoa</span>
-            <span class="text-muted" aria-hidden="true">/</span>
-            <cite class="not-italic text-muted">Dựng phim tự do</cite>
-          </figcaption>
-        </figure>
+<section aria-labelledby="cam-nhan-title" class="section">
+  <div class="flex flex-col items-center gap-8 text-center">
+    <h2 id="cam-nhan-title" class="sr-only">Cam kết của DataBox</h2>
+
+    <div id="cam-nhan-slider" class="relative w-full max-w-3xl" role="region" aria-roledescription="carousel" aria-label="Cảm nhận khách hàng">
+      <div class="overflow-hidden">
+        <ul id="cam-nhan-track" class="flex w-full transition-transform duration-500 ease-out">
+          <li class="w-full shrink-0 px-1" role="group" aria-roledescription="slide" aria-label="1/3">
+            <figure class="flex w-full flex-col items-center gap-6 rounded-card border-2 border-brand-100 bg-surface p-10 dark:border-brand-950 dark:bg-surface-dark">
+              <span class="grid h-12 w-12 place-items-center text-brand-600" aria-hidden="true">
+                <svg class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 4C6 4 3 7.1 3 10.9c0 3 2 5.4 4.6 6L9 20c-3.9-.6-7-3.9-7-8.5C2 6.3 5.6 2 10.5 2L9.5 4Zm10 0c-3.5 0-6.5 3.1-6.5 6.9 0 3 2 5.4 4.6 6l1.4 3.1c-3.9-.6-7-3.9-7-8.5C12 6.3 15.6 2 20.5 2L19.5 4Z"/></svg>
+              </span>
+              <blockquote class="font-display text-2xl font-medium text-ink lg:text-3xl">Trước đây gửi file dựng phim 1GB cho khách qua Zalo hay bị lỗi giữa chừng. Giờ gửi link DataBox, khách tải xong tôi thấy ngay trên bảng thống kê, khỏi phải nhắn hỏi lại.</blockquote>
+              <figcaption class="flex items-center gap-2 text-sm">
+                <span class="font-semibold text-ink">Trần Minh Khoa</span>
+                <span class="text-muted" aria-hidden="true">/</span>
+                <cite class="not-italic text-muted">Dựng phim tự do</cite>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="w-full shrink-0 px-1" role="group" aria-roledescription="slide" aria-label="2/3">
+            <figure class="flex w-full flex-col items-center gap-6 rounded-card border-2 border-brand-100 bg-surface p-10 dark:border-brand-950 dark:bg-surface-dark">
+              <span class="grid h-12 w-12 place-items-center text-brand-600" aria-hidden="true">
+                <svg class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 4C6 4 3 7.1 3 10.9c0 3 2 5.4 4.6 6L9 20c-3.9-.6-7-3.9-7-8.5C2 6.3 5.6 2 10.5 2L9.5 4Zm10 0c-3.5 0-6.5 3.1-6.5 6.9 0 3 2 5.4 4.6 6l1.4 3.1c-3.9-.6-7-3.9-7-8.5C12 6.3 15.6 2 20.5 2L19.5 4Z"/></svg>
+              </span>
+             <blockquote class="font-display text-2xl font-medium text-ink lg:text-3xl">Mình hay úp mấy file game repack chục, trăm GB lên để share cho nhóm tải. Trước dùng mấy trang khác hay bị die link nửa chừng, giờ chuyển qua DataBox vừa up ổn định, vừa để luôn trên đó làm kho, cần bản nào tải lại là có.</blockquote>
+              <figcaption class="flex items-center gap-2 text-sm">
+                <span class="font-semibold text-ink">Đức Anh</span>
+                <span class="text-muted" aria-hidden="true">/</span>
+                <cite class="not-italic text-muted">Chia sẻ game repack</cite>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="w-full shrink-0 px-1" role="group" aria-roledescription="slide" aria-label="3/3">
+            <figure class="flex w-full flex-col items-center gap-6 rounded-card border-2 border-brand-100 bg-surface p-10 dark:border-brand-950 dark:bg-surface-dark">
+              <span class="grid h-12 w-12 place-items-center text-brand-600" aria-hidden="true">
+                <svg class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 4C6 4 3 7.1 3 10.9c0 3 2 5.4 4.6 6L9 20c-3.9-.6-7-3.9-7-8.5C2 6.3 5.6 2 10.5 2L9.5 4Zm10 0c-3.5 0-6.5 3.1-6.5 6.9 0 3 2 5.4 4.6 6l1.4 3.1c-3.9-.6-7-3.9-7-8.5C12 6.3 15.6 2 20.5 2L19.5 4Z"/></svg>
+              </span>
+              <blockquote class="font-display text-2xl font-medium text-ink lg:text-3xl">Điện thoại với laptop mình đều ít bộ nhớ, ảnh với video cứ chụp vài bữa là báo đầy máy. Giờ mình để hết lên DataBox, xoá bớt trong máy cho nhẹ, lúc nào cần coi lại thì tải xuống là có ngay.</blockquote>
+              <figcaption class="flex items-center gap-2 text-sm">
+                  <span class="font-semibold text-ink">Thảo Vy</span>
+                  <span class="text-muted" aria-hidden="true">/</span>
+                  <cite class="not-italic text-muted">Sinh viên năm 3</cite>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
       </div>
-    </section>
+
+      <button type="button" data-slider-prev aria-label="Cảm nhận trước"
+              class="absolute left-0 top-1/2 -translate-x-4 -translate-y-1/2 grid h-10 w-10 place-items-center rounded-full border border-line bg-canvas text-ink shadow-sm hover:bg-surface dark:border-line-invert dark:bg-canvas-dark dark:hover:bg-surface-dark">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button type="button" data-slider-next aria-label="Cảm nhận kế tiếp"
+              class="absolute right-0 top-1/2 translate-x-4 -translate-y-1/2 grid h-10 w-10 place-items-center rounded-full border border-line bg-canvas text-ink shadow-sm hover:bg-surface dark:border-line-invert dark:bg-canvas-dark dark:hover:bg-surface-dark">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+
+      <div data-slider-dots class="mt-6 flex items-center justify-center gap-2"></div>
+    </div>
+  </div>
+</section>
 
     <section aria-labelledby="so-sanh-title" class="section">
       <div class="flex flex-col items-center gap-4 text-center">
@@ -166,7 +221,7 @@
         <p class="mt-2 text-sm text-muted lg:hidden">Vuốt ngang để xem hết bảng.</p>
       </div>
       <div class="mt-14 max-w-full overflow-x-auto">
-        <table class="min-w-[640px] w-full border-collapse overflow-hidden rounded-card border-2 border-line bg-surface dark:border-line-invert dark:bg-surface-dark text-left">
+        <table class="min-w-160 w-full border-collapse overflow-hidden rounded-card border-2 border-line bg-surface dark:border-line-invert dark:bg-surface-dark text-left">
           <caption class="sr-only">So sánh gửi file qua Zalo/Email và DataBox gói Tiêu chuẩn</caption>
           <thead>
             <tr class="border-b border-line bg-surface dark:border-line-invert dark:bg-surface-dark">
@@ -242,14 +297,14 @@
           <h2 id="cau-hoi-title" class="font-display text-3xl text-ink sm:text-4xl lg:text-h2">Câu hỏi hay gặp</h2>
           <p class="text-muted">Chưa thấy câu trả lời bạn cần? <a href="contact.html" class="font-semibold text-brand-600 hover:text-brand-800">Liên hệ với chúng tôi</a>.</p>
         </div>
-        <ul class="flex min-w-0 flex-col divide-y divide-line">
-          <li class="flex flex-col gap-2 py-5"><h3><button aria-expanded="true" class="text-ink">Người nhận file có cần tạo tài khoản không?</button></h3><p class="text-muted">Không cần. Người nhận chỉ cần bấm vào link là tải được ngay, không phải đăng nhập hay cài thêm gì.</p></li>
-          <li class="flex flex-col gap-2 py-5"><h3><button aria-expanded="true" class="text-ink">File của mình có bị người lạ xem được không?</button></h3><p class="text-muted">Bạn có thể đặt mật khẩu cho từng link chia sẻ. Ai không có mật khẩu thì không mở file được, kể cả khi có đúng link.</p></li>
-          <li class="flex flex-col gap-2 py-5"><h3><button aria-expanded="true" class="text-ink">File để lâu không ai tải thì có bị xoá không?</button></h3><p class="text-muted">Gói Cơ bản file tự xoá sau 7 ngày nếu không ai tải. Gói Tiêu chuẩn và Nhóm bạn tự chọn thời gian lưu, kể cả lưu vĩnh viễn.</p></li>
-          <li class="flex flex-col gap-2 py-5"><h3><button aria-expanded="true" class="text-ink">Đang dùng gói trả phí, huỷ giữa tháng được không?</button></h3><p class="text-muted">Được. Bạn huỷ lúc nào cũng được, không mất thêm phí phạt, dùng hết tới ngày cuối của tháng đã đóng tiền rồi tự chuyển về gói Cơ bản.</p></li>
-          <li class="flex flex-col gap-2 py-5"><h3><button aria-expanded="true" class="text-ink">Gói Cơ bản giới hạn dung lượng file bao nhiêu?</button></h3><p class="text-muted">Mỗi file tối đa 2GB, đủ cho hầu hết file ảnh, PDF, video ngắn. Cần gửi file lớn hơn thì nâng lên gói Tiêu chuẩn.</p></li>
-          <li class="flex flex-col gap-2 py-5"><h3><button aria-expanded="true" class="text-ink">Có xem được file của mình đã được tải chưa không?</button></h3><p class="text-muted">Có. Mỗi link chia sẻ đều có bảng ghi lại số lượt tải và thời gian tải gần nhất. DataBox không hiển thị danh tính người tải, chỉ cho biết file đã được mở hay chưa.</p></li>
-        </ul>
+       <ul data-faq-root class="flex min-w-0 flex-col divide-y divide-line">
+  <li class="flex flex-col gap-2 py-5"><h3><button type="button" data-faq-trigger aria-expanded="true" aria-controls="faq-panel-1" class="faq-trigger"><span>Người nhận file có cần tạo tài khoản không?</span><svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></h3><p id="faq-panel-1" class="text-muted">Không cần. Người nhận chỉ cần bấm vào link là tải được ngay, không phải đăng nhập hay cài thêm gì.</p></li>
+  <li class="flex flex-col gap-2 py-5"><h3><button type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-2" class="faq-trigger"><span>File của mình có bị người lạ xem được không?</span><svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></h3><p id="faq-panel-2" class="text-muted" hidden>Bạn có thể đặt mật khẩu cho từng link chia sẻ. Ai không có mật khẩu thì không mở file được, kể cả khi có đúng link.</p></li>
+  <li class="flex flex-col gap-2 py-5"><h3><button type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-3" class="faq-trigger"><span>File để lâu không ai tải thì có bị xoá không?</span><svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></h3><p id="faq-panel-3" class="text-muted" hidden>Gói Cơ bản file tự xoá sau 7 ngày nếu không ai tải. Gói Tiêu chuẩn và Nhóm bạn tự chọn thời gian lưu, kể cả lưu vĩnh viễn.</p></li>
+  <li class="flex flex-col gap-2 py-5"><h3><button type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-4" class="faq-trigger"><span>Đang dùng gói trả phí, huỷ giữa tháng được không?</span><svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></h3><p id="faq-panel-4" class="text-muted" hidden>Được. Bạn huỷ lúc nào cũng được, không mất thêm phí phạt, dùng hết tới ngày cuối của tháng đã đóng tiền rồi tự chuyển về gói Cơ bản.</p></li>
+  <li class="flex flex-col gap-2 py-5"><h3><button type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-5" class="faq-trigger"><span>Gói Cơ bản giới hạn dung lượng file bao nhiêu?</span><svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></h3><p id="faq-panel-5" class="text-muted" hidden>Mỗi file tối đa 2GB, đủ cho hầu hết file ảnh, PDF, video ngắn. Cần gửi file lớn hơn thì nâng lên gói Tiêu chuẩn.</p></li>
+  <li class="flex flex-col gap-2 py-5"><h3><button type="button" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-6" class="faq-trigger"><span>Có xem được file của mình đã được tải chưa không?</span><svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></h3><p id="faq-panel-6" class="text-muted" hidden>Có. Mỗi link chia sẻ đều có bảng ghi lại số lượt tải và thời gian tải gần nhất. DataBox không hiển thị danh tính người tải, chỉ cho biết file đã được mở hay chưa.</p></li>
+</ul>
       </div>
     </section>
 
@@ -292,13 +347,31 @@
           <h3 id="footer-lien-he-title" class="text-sm font-semibold text-ink">Liên hệ</h3>
           <ul class="flex flex-col gap-2 text-sm text-muted">
             <li><a href="contact.html" class="hover:text-brand-600">Gửi liên hệ</a></li>
-            <li><a href="#" class="hover:text-brand-600">hi@databox.vn</a></li>
-            <li><a href="#" class="hover:text-brand-600">0900 000 000</a></li>
+            <li><button type="button" class="hover:text-brand-600" data-copy="hi@databox.vn">hi@databox.vn</button></li>
+            <li><button type="button" class="hover:text-brand-600" data-copy="0900000000">0900 000 000</button></li>
           </ul>
         </nav>
       </div>
-      <p class="border-t border-line pt-8 text-center text-sm text-muted">© 2026 DataBox. Bảo lưu mọi quyền.</p>
+      <div class="flex flex-col items-center gap-4 border-t border-line pt-8">
+  <a href="index.html" class="flex items-center gap-2 font-display text-lg font-bold text-brand-600">
+    <img src="./assets/img/DBlogo.png" alt="" class="h-8 w-8">
+    DataBox
+  </a>
+  <p class="text-center text-sm text-muted">© 2026 DataBox. Bảo lưu mọi quyền.</p>
+  <ul class="flex items-center gap-5 text-muted">
+    <li><a href="#" aria-label="GitHub" class="hover:text-brand-600"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a></li>
+    <li><a href="#" aria-label="Twitter" class="hover:text-brand-600"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 5.9c-.72.33-1.5.55-2.3.65a4.1 4.1 0 0 0 1.78-2.27c-.78.47-1.64.8-2.55.98a4.02 4.02 0 0 0-6.86 3.68A11.42 11.42 0 0 1 3.9 4.95a4.03 4.03 0 0 0 1.25 5.4c-.66-.02-1.28-.2-1.83-.5v.05a4.03 4.03 0 0 0 3.24 3.95c-.6.16-1.24.19-1.87.07a4.04 4.04 0 0 0 3.77 2.8A8.08 8.08 0 0 1 2 18.4a11.4 11.4 0 0 0 6.17 1.81c7.4 0 11.45-6.13 11.45-11.45l-.01-.52c.79-.57 1.47-1.28 2.01-2.09-.72.33-1.5.55-2.3.65Z"/></svg></a></li>
+    <li><a href="#" aria-label="Dribbble" class="hover:text-brand-600"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 3.5c2.5 2.9 4 6.6 4 10.5 0 2.5-.5 4.8-1.4 6.9M16 20.5c-1-3.5-3-6.6-6-8.7M3 9c4 1.3 8.5 1.3 12.5 0 2-.6 3.8-1.5 5.3-2.6"/></svg></a></li>
+    <li><a href="#" aria-label="Facebook" class="hover:text-brand-600"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8.1h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.3-.04-1.3-.13-2.5-.13-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3v3.1h2.7V21h3.5Z"/></svg></a></li>
+  </ul>
+</div>
     </div>
   </footer>
+<button id="nut-len-dau" class="to-top btn btn-primary fixed bottom-6 right-6 rounded-full! p-3! shadow-lg" aria-label="Lên đầu trang">    
+  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+   <script type="module" src="./js/main.js"></script>
 </body>
 </html>
