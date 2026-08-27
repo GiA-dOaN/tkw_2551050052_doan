@@ -37,18 +37,19 @@
         <li><a href="#cau-hoi-title" class="hover:text-brand-600">Câu hỏi</a></li>
       </ul>
       <div class="flex items-center gap-4">
-<button id="theme-toggle" type="button" class="theme-toggle" aria-pressed="false" aria-label="Chuyển sang giao diện tối">
-  <svg class="icon-moon" style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
-  </svg>
-  <svg class="icon-sun" style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-    <circle cx="12" cy="12" r="4"/>
-    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
-  </svg>
-</button>
+        <button id="theme-toggle" type="button" class="theme-toggle" aria-pressed="false" aria-label="Chuyển sang giao diện tối">
+          <svg class="icon-moon" style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
+          </svg>
+          <svg class="icon-sun" style="width:20px;height:20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+        </button>
         <a href="#" class="hidden text-sm font-medium text-ink hover:text-brand-600 lg:inline">Đăng nhập</a>
         <button class="btn btn-primary hidden sm:inline-flex">Bắt đầu miễn phí</button>
-<button class="lg:hidden" aria-controls="nav-mobile" aria-expanded="false" aria-label="Mở menu điều hướng">          <svg class="h-6 w-6 text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <button class="lg:hidden" aria-controls="nav-mobile" aria-expanded="false" aria-label="Mở menu điều hướng">          
+            <svg class="h-6 w-6 text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </button>
@@ -159,23 +160,71 @@
       </div>
     </section>
 
-    <section aria-labelledby="cam-nhan-title" class="section">
-      <div class="flex flex-col items-center gap-8 text-center">
-        <h2 id="cam-nhan-title" class="sr-only">Cam kết của DataBox</h2>
-        <figure class="flex w-full flex-col items-center gap-6 rounded-card border-2 border-brand-100 bg-surface p-10">
-          <span class="grid h-12 w-12 place-items-center text-brand-600" aria-hidden="true">
-            <svg class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 4C6 4 3 7.1 3 10.9c0 3 2 5.4 4.6 6L9 20c-3.9-.6-7-3.9-7-8.5C2 6.3 5.6 2 10.5 2L9.5 4Zm10 0c-3.5 0-6.5 3.1-6.5 6.9 0 3 2 5.4 4.6 6l1.4 3.1c-3.9-.6-7-3.9-7-8.5C12 6.3 15.6 2 20.5 2L19.5 4Z"/></svg>
-          </span>
-          <blockquote class="font-display text-2xl font-medium text-ink lg:text-3xl">Trước đây gửi file dựng phim 1GB cho khách qua Zalo hay bị lỗi giữa chừng. Giờ gửi link DataBox, khách tải xong tôi thấy ngay trên bảng thống kê, khỏi phải nhắn hỏi lại.</blockquote>
-          <figcaption class="flex items-center gap-2 text-sm">
-            <img src="./assets/img/avatar-1.png" alt="" class="h-8 w-8 rounded-full">
-            <span class="font-semibold text-ink">Trần Minh Khoa</span>
-            <span class="text-muted" aria-hidden="true">/</span>
-            <cite class="not-italic text-muted">Dựng phim tự do</cite>
-          </figcaption>
-        </figure>
+<section aria-labelledby="cam-nhan-title" class="section">
+  <div class="flex flex-col items-center gap-8 text-center">
+    <h2 id="cam-nhan-title" class="sr-only">Cam kết của DataBox</h2>
+
+    <div id="cam-nhan-slider" class="relative w-full max-w-3xl" role="region" aria-roledescription="carousel" aria-label="Cảm nhận khách hàng">
+      <div class="overflow-hidden">
+        <ul id="cam-nhan-track" class="flex w-full transition-transform duration-500 ease-out">
+          <li class="w-full shrink-0 px-1" role="group" aria-roledescription="slide" aria-label="1/3">
+            <figure class="flex w-full flex-col items-center gap-6 rounded-card border-2 border-brand-100 bg-surface p-10 dark:border-brand-950 dark:bg-surface-dark">
+              <span class="grid h-12 w-12 place-items-center text-brand-600" aria-hidden="true">
+                <svg class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 4C6 4 3 7.1 3 10.9c0 3 2 5.4 4.6 6L9 20c-3.9-.6-7-3.9-7-8.5C2 6.3 5.6 2 10.5 2L9.5 4Zm10 0c-3.5 0-6.5 3.1-6.5 6.9 0 3 2 5.4 4.6 6l1.4 3.1c-3.9-.6-7-3.9-7-8.5C12 6.3 15.6 2 20.5 2L19.5 4Z"/></svg>
+              </span>
+              <blockquote class="font-display text-2xl font-medium text-ink lg:text-3xl">Trước đây gửi file dựng phim 1GB cho khách qua Zalo hay bị lỗi giữa chừng. Giờ gửi link DataBox, khách tải xong tôi thấy ngay trên bảng thống kê, khỏi phải nhắn hỏi lại.</blockquote>
+              <figcaption class="flex items-center gap-2 text-sm">
+                <img src="./assets/img/avatar-1.png" alt="" class="h-8 w-8 rounded-full">
+                <span class="font-semibold text-ink">Trần Minh Khoa</span>
+                <span class="text-muted" aria-hidden="true">/</span>
+                <cite class="not-italic text-muted">Dựng phim tự do</cite>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="w-full shrink-0 px-1" role="group" aria-roledescription="slide" aria-label="2/3">
+            <figure class="flex w-full flex-col items-center gap-6 rounded-card border-2 border-brand-100 bg-surface p-10 dark:border-brand-950 dark:bg-surface-dark">
+              <span class="grid h-12 w-12 place-items-center text-brand-600" aria-hidden="true">
+                <svg class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 4C6 4 3 7.1 3 10.9c0 3 2 5.4 4.6 6L9 20c-3.9-.6-7-3.9-7-8.5C2 6.3 5.6 2 10.5 2L9.5 4Zm10 0c-3.5 0-6.5 3.1-6.5 6.9 0 3 2 5.4 4.6 6l1.4 3.1c-3.9-.6-7-3.9-7-8.5C12 6.3 15.6 2 20.5 2L19.5 4Z"/></svg>
+              </span>
+             <blockquote class="font-display text-2xl font-medium text-ink lg:text-3xl">Mình hay úp mấy file game repack chục, trăm GB lên để share cho nhóm tải. Trước dùng mấy trang khác hay bị die link nửa chừng, giờ chuyển qua DataBox vừa up ổn định, vừa để luôn trên đó làm kho, cần bản nào tải lại là có.</blockquote>
+              <figcaption class="flex items-center gap-2 text-sm">
+                <img src="./assets/img/avatar-2.png" alt="" class="h-8 w-8 rounded-full">
+                <span class="font-semibold text-ink">Đức Anh</span>
+                <span class="text-muted" aria-hidden="true">/</span>
+                <cite class="not-italic text-muted">Chia sẻ game repack</cite>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="w-full shrink-0 px-1" role="group" aria-roledescription="slide" aria-label="3/3">
+            <figure class="flex w-full flex-col items-center gap-6 rounded-card border-2 border-brand-100 bg-surface p-10 dark:border-brand-950 dark:bg-surface-dark">
+              <span class="grid h-12 w-12 place-items-center text-brand-600" aria-hidden="true">
+                <svg class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 4C6 4 3 7.1 3 10.9c0 3 2 5.4 4.6 6L9 20c-3.9-.6-7-3.9-7-8.5C2 6.3 5.6 2 10.5 2L9.5 4Zm10 0c-3.5 0-6.5 3.1-6.5 6.9 0 3 2 5.4 4.6 6l1.4 3.1c-3.9-.6-7-3.9-7-8.5C12 6.3 15.6 2 20.5 2L19.5 4Z"/></svg>
+              </span>
+              <blockquote class="font-display text-2xl font-medium text-ink lg:text-3xl">Điện thoại với laptop mình đều ít bộ nhớ, ảnh với video cứ chụp vài bữa là báo đầy máy. Giờ mình để hết lên DataBox, xoá bớt trong máy cho nhẹ, lúc nào cần coi lại thì tải xuống là có ngay.</blockquote>
+              <figcaption class="flex items-center gap-2 text-sm">
+                 <img src="./assets/img/avatar-3.png" alt="" class="h-8 w-8 rounded-full">
+                  <span class="font-semibold text-ink">Thảo Vy</span>
+                  <span class="text-muted" aria-hidden="true">/</span>
+                  <cite class="not-italic text-muted">Sinh viên năm 3</cite>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
       </div>
-    </section>
+
+      <button type="button" data-slider-prev aria-label="Cảm nhận trước"
+              class="absolute left-0 top-1/2 -translate-x-4 -translate-y-1/2 grid h-10 w-10 place-items-center rounded-full border border-line bg-canvas text-ink shadow-sm hover:bg-surface dark:border-line-invert dark:bg-canvas-dark dark:hover:bg-surface-dark">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button type="button" data-slider-next aria-label="Cảm nhận kế tiếp"
+              class="absolute right-0 top-1/2 translate-x-4 -translate-y-1/2 grid h-10 w-10 place-items-center rounded-full border border-line bg-canvas text-ink shadow-sm hover:bg-surface dark:border-line-invert dark:bg-canvas-dark dark:hover:bg-surface-dark">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+
+      <div data-slider-dots class="mt-6 flex items-center justify-center gap-2"></div>
+    </div>
+  </div>
+</section>
 
     <section aria-labelledby="so-sanh-title" class="section">
       <div class="flex flex-col items-center gap-4 text-center">
