@@ -3,6 +3,7 @@ import { initTheme } from "./theme.js";
 import { initFaq } from "./faq.js";
 import { initPricingToggle, initPricingReveal } from "./pricing.js";
 import { initSlider } from "./slider.js";
+import { initCopy } from "./copy.js";
 
 initNav();
 initHeaderOnScroll();
@@ -12,3 +13,4 @@ initPricingToggle();
 initPricingReveal();
 initToTop();
 initSlider();
+initCopy();
